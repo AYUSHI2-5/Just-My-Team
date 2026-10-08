@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rolling Hills Ranch &amp; Timberland — Property Details — Just My Team</title>
+  <meta name="description" content="View property details, location specifications, and listing information on Just My Team.">
+  <link rel="stylesheet" href="css/main.css?v=11">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230877E8'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body class="property-detail-page">
+
+  <!-- Ambient Light Atmosphere -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="bg-ambient-orb orb-1"></div>
+    <div class="bg-ambient-orb orb-2"></div>
+    <div class="bg-ambient-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Pure CSS Mobile Navigation State Controller -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- NAVIGATION BAR -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link active">Properties</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-login">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm join-btn" id="btn-nav-join">
+          Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Pure CSS Mobile Hamburger Toggle Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Pure CSS Mobile Drawer & Backdrop -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="properties.html" class="drawer-link active">Properties</a></li>
+        <li><a href="blog.html" class="drawer-link">Blog &amp; Insights</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Agent Sign In</a>
+      <a href="register.html" class="btn btn-primary" style="width: 100%;">Join Code</a>
+    </div>
+  </aside>
+
+  <!-- PROPERTY DETAIL MAIN CONTAINER -->
+  <main class="property-detail-page">
+    <div class="property-detail-container">
+
+      <!-- Breadcrumbs & Quick Back Link -->
+      <div class="prop-breadcrumb-bar">
+        <nav class="prop-breadcrumbs" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="prop-breadcrumbs-sep">&rsaquo;</span>
+          <a href="properties.html">Properties</a>
+          <span class="prop-breadcrumbs-sep">&rsaquo;</span>
+          <span class="prop-breadcrumbs-current">Rolling Hills Ranch &amp; Timberland</span>
+        </nav>
+
+        <a href="properties.html" class="btn-back-properties">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Properties
+        </a>
+      </div>
+
+      <!-- Property Summary Header Banner -->
+      <header class="prop-header-card">
+        <div class="prop-header-main">
+          <div>
+            <div class="prop-header-badges">
+              <span class="prop-badge-active">Active Property</span>
+              <span class="prop-badge-loc">State: Texas</span>
+              <span class="prop-badge-loc">City: Austin Metro</span>
+            </div>
+            <h1 class="prop-header-title">Rolling Hills Ranch &amp; Timberland</h1>
+            <div class="prop-header-address">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>14820 Rolling Creek Pkwy, Austin Metro Area, TX 78738</span>
+            </div>
+          </div>
+
+          <div class="prop-header-price-col">
+            <div class="prop-header-price-label">Listing Price</div>
+            <div class="prop-header-price-val">$595,000</div>
+            <div class="prop-header-price-sub">140 Acres Total</div>
+          </div>
+        </div>
+
+        <!-- 4 Key Stat Blocks -->
+        <div class="prop-stats-grid">
+          <div class="prop-stat-box">
+            <div class="prop-stat-lbl">Total Area</div>
+            <div class="prop-stat-val">140 AC</div>
+          </div>
+          <div class="prop-stat-box">
+            <div class="prop-stat-lbl">State</div>
+            <div class="prop-stat-val">Texas</div>
+          </div>
+          <div class="prop-stat-box">
+            <div class="prop-stat-lbl">City</div>
+            <div class="prop-stat-val">Austin Metro</div>
+          </div>
+          <div class="prop-stat-box">
+            <div class="prop-stat-lbl">Listing Agent</div>
+            <div class="prop-stat-val">Marcus R.</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Property Content (Two-Column Layout) -->
+      <div class="prop-content-layout property-detail-layout">
+
+        <!-- Left Column: Gallery & Details -->
+        <div class="prop-gallery-col">
+
+          <!-- Main Hero Image -->
+          <div class="prop-main-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" 
+              alt="Rolling Hills Ranch Aerial Landscape" 
+              loading="eager"
+            />
+            <span class="prop-img-overlay-badge">Aerial Property View</span>
+          </div>
+
+          <!-- Secondary Image Gallery (3 Columns) -->
+          <div class="prop-secondary-gallery">
+            <div class="prop-secondary-item">
+              <div class="prop-secondary-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" 
+                  alt="Timberland & Trees" 
+                  loading="lazy"
+                />
+              </div>
+              <span class="prop-secondary-caption">Landscape &amp; Trees</span>
+            </div>
+
+            <div class="prop-secondary-item">
+              <div class="prop-secondary-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
+                  alt="Creek View and Water Feature" 
+                  loading="lazy"
+                />
+              </div>
+              <span class="prop-secondary-caption">Water Feature</span>
+            </div>
+
+            <div class="prop-secondary-item">
+              <div class="prop-secondary-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" 
+                  alt="Open Grounds and Pastures" 
+                  loading="lazy"
+                />
+              </div>
+              <span class="prop-secondary-caption">Open Grounds</span>
+            </div>
+          </div>
+
+          <!-- SECTION 1: PROPERTY INFORMATION -->
+          <article class="prop-card-section">
+            <div class="prop-card-title-row">
+              <h2>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>Property Information</span>
+              </h2>
+              <span class="prop-badge-active">● Active</span>
+            </div>
+
+            <div class="prop-grid-specs">
+              <div class="prop-spec-item">
+                <div class="prop-spec-k">Property Title</div>
+                <div class="prop-spec-v">Rolling Hills Ranch</div>
+              </div>
+              <div class="prop-spec-item">
+                <div class="prop-spec-k">Price</div>
+                <div class="prop-spec-v blue">$595,000.00</div>
+              </div>
+              <div class="prop-spec-item">
+                <div class="prop-spec-k">Category</div>
+                <div class="prop-spec-v">Land &amp; Acreage</div>
+              </div>
+              <div class="prop-spec-item">
+                <div class="prop-spec-k">Status</div>
+                <div class="prop-spec-v green">Active</div>
+              </div>
+              <div class="prop-spec-item">
+                <div class="prop-spec-k">State</div>
+                <div class="prop-spec-v">Texas</div>
+              </div>
+              <div class="prop-spec-item">
+                <div class="prop-spec-k">City</div>
+                <div class="prop-spec-v">Austin Metro Area</div>
+              </div>
+            </div>
+
+            <!-- Address Block -->
+            <div class="prop-loc-box">
+              <div class="prop-loc-left">
+                <div class="prop-loc-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="prop-loc-street">14820 Rolling Creek Pkwy</div>
+                  <div class="prop-loc-city">Austin Metro Area, Texas 78738</div>
+                </div>
+              </div>
+              <div class="prop-loc-pills">
+                <span class="prop-pill-sm">State: Texas</span>
+                <span class="prop-pill-sm">City: Austin Metro</span>
+                <span class="prop-pill-sm">Zip: 78738</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- SECTION 2: PROPERTY OVERVIEW / DESCRIPTION -->
+          <article class="prop-card-section">
+            <div class="prop-card-title-row">
+              <h3>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Property Overview</span>
+              </h3>
+            </div>
+
+            <div style="color: #667085; line-height: 1.7; font-size: 0.95rem;">
+              <p style="margin-bottom: 1rem;">
+                A 140-acre property situated in the Austin Metro Area, Texas. Features road access, open grounds, mature trees, and perimeter fencing.
+              </p>
+              <p>
+                Agents associated with this property can edit details, update status, and manage inquiries through direct messaging on Just My Team.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Right Column: Sidebar (Sticky on Desktop) -->
+        <aside class="prop-sidebar-sticky property-sidebar">
+
+          <!-- Property Details Quick Specs -->
+          <div class="prop-sidebar-card">
+            <div class="prop-sidebar-heading">Property Details</div>
+            
+            <div class="prop-sidebar-list">
+              <div class="prop-sidebar-row">
+                <span class="prop-sidebar-k">Property Type</span>
+                <span class="prop-sidebar-v">Ranch / Land</span>
+              </div>
+              <div class="prop-sidebar-row">
+                <span class="prop-sidebar-k">Location</span>
+                <span class="prop-sidebar-v">Austin Metro, TX</span>
+              </div>
+              <div class="prop-sidebar-row">
+                <span class="prop-sidebar-k">Total Area</span>
+                <span class="prop-sidebar-v">140 AC</span>
+              </div>
+              <div class="prop-sidebar-row">
+                <span class="prop-sidebar-k">Listing Agent</span>
+                <span class="prop-sidebar-v">Marcus R.</span>
+              </div>
+            </div>
+
+            <a href="contact.html?property=101" class="prop-btn-primary-action">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Contact Agent
+            </a>
+          </div>
+
+          <!-- Listing Agent Profile Card -->
+          <div class="prop-sidebar-card">
+            <div class="prop-agent-info-row">
+              <img src="assets/front/agent-avatar.png?v=5" alt="Marcus Reynolds" class="prop-agent-avatar" />
+              <div>
+                <div class="prop-agent-name">Marcus Reynolds</div>
+                <div class="prop-agent-role">Listing Agent &bull; Texas</div>
+              </div>
+            </div>
+
+            <div class="prop-agent-features">
+              <div>📍 Texas, Austin Metro Area</div>
+              <div>💬 Direct Messaging Available</div>
+              <div>🏡 Property Creator &amp; Manager</div>
+            </div>
+
+            <a href="login.html" class="prop-btn-primary-action">
+              Sign In to Message
+            </a>
+
+            <a href="properties.html" class="prop-btn-outline-action">
+              &larr; Back to Properties
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ai-assistant.js" defer></script>
+  <script src="js/main.js?v=5"></script>
+</body>
+</html>

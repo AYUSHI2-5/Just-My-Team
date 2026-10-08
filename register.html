@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Registration — Just My Team</title>
+  <meta name="description" content="Register for Just My Team using a validated referral code. Manage your network, properties, chats, and personal notes.">
+  <link rel="stylesheet" href="css/main.css?v=4">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A5F'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Ambient Light Atmosphere -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="bg-ambient-orb orb-1"></div>
+    <div class="bg-ambient-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-login">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm active join-btn" id="btn-nav-join">
+          Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="properties.html" class="drawer-link">Properties</a></li>
+        <li><a href="blog.html" class="drawer-link">Blog &amp; Insights</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Agent Sign In</a>
+      <a href="register.html" class="btn btn-primary" style="width: 100%;">Join Code</a>
+    </div>
+  </aside>
+
+  <!-- Register Main -->
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 3.5rem 1.5rem; position: relative; z-index: 2;">
+    <div class="glass-card" style="width: 100%; max-width: 580px; padding: 3rem 2.5rem; border-color: var(--border-subtle); box-shadow: var(--shadow-glow);">
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="section-tag">Account Registration</span>
+        <h1 style="font-size: 2.1rem; margin-top: 0.5rem; margin-bottom: 0.4rem;">Create Account</h1>
+        <p style="font-size: 0.95rem; color: var(--text-secondary);">Enter your referral code to complete registration.</p>
+      </div>
+
+      <!-- Referral Validation Banner -->
+      <div id="sponsor-banner" style="background: rgba(8, 119, 232, 0.08); border: 1px solid rgba(8, 119, 232, 0.3); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div class="agent-avatar" style="width: 36px; height: 36px;">REF</div>
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em;">Referral Validation</div>
+            <div class="sponsor-code-val" style="font-family: var(--font-mono); font-weight: 700; color: var(--teal-primary); font-size: 0.95rem;">JMT-FOUNDER</div>
+          </div>
+        </div>
+        <span class="badge-tag badge-green" id="sponsor-status-badge">Validated</span>
+      </div>
+
+      <form action="index.html" method="GET">
+        
+        <div class="form-group">
+          <label class="form-label" for="reg-sponsor-code">Referral Code *</label>
+          <input type="text" id="reg-sponsor-code" name="referral_code" class="form-control" placeholder="e.g. JMT-FOUNDER" required value="JMT-FOUNDER" style="font-family: var(--font-mono); text-transform: uppercase; font-weight: 600; color: var(--teal-primary);">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="reg-firstname">First Name *</label>
+            <input type="text" id="reg-firstname" name="first_name" class="form-control" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-lastname">Last Name *</label>
+            <input type="text" id="reg-lastname" name="last_name" class="form-control" placeholder="Doe" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email Address *</label>
+          <input type="email" id="reg-email" name="email" class="form-control" placeholder="john.doe@example.com" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="reg-state">State *</label>
+            <input type="text" id="reg-state" name="state" class="form-control" placeholder="Texas" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-city">City *</label>
+            <input type="text" id="reg-city" name="city" class="form-control" placeholder="Austin" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-pass">Password *</label>
+          <input type="password" id="reg-pass" name="password" class="form-control" placeholder="Create a secure password" required minlength="8">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+          Complete Registration
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+
+      <div style="margin-top: 1.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); text-align: center; font-size: 0.88rem; color: var(--text-muted);">
+        Already have an account? <br>
+        <a href="login.html" style="color: var(--teal-primary); font-weight: 600;">Sign in to your account &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5"></script>
+  <script src="js/ai-assistant.js?v=5"></script>
+</body>
+</html>

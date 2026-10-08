@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Control Center — Just My Team</title>
+  <meta name="description" content="Platform Administration & Membership Plan Management for Just My Team Administrators.">
+  <link rel="stylesheet" href="css/main.css?v=5">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A5F'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  <!-- Immediate Pre-Render Route Protection: Block non-admins immediately -->
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('jmt_user_data');
+        var user = stored ? JSON.parse(stored) : null;
+        var loggedIn = localStorage.getItem('jmt_logged_in') === 'true';
+        if (!loggedIn || !user || !user.role || user.role.toLowerCase() !== 'admin') {
+          sessionStorage.setItem('jmt_auth_error', '403 Forbidden: Access restricted to platform administrators.');
+          window.location.replace('dashboard.html');
+        }
+      } catch(e) {
+        window.location.replace('dashboard.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Ambient Light Atmosphere -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="bg-ambient-orb orb-1"></div>
+    <div class="bg-ambient-orb orb-2"></div>
+    <div class="bg-ambient-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="admin.html" class="nav-link active">Admin Console</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="profile.html" class="nav-link">Profile</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions nav-actions-desktop">
+        <span class="badge-tag badge-gold" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">Admin Access</span>
+        <button type="button" class="btn btn-secondary btn-sm jmt-logout-trigger" style="background: rgba(8, 119, 232, 0.1); border-color: var(--border-subtle); color: #0877E8;">
+          Sign Out
+        </button>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="dashboard.html" class="drawer-link">Dashboard</a></li>
+        <li><a href="admin.html" class="drawer-link active">Admin Console</a></li>
+        <li><a href="properties.html" class="drawer-link">Properties</a></li>
+        <li><a href="profile.html" class="drawer-link">Profile</a></li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <button type="button" class="btn btn-secondary jmt-logout-trigger" style="width: 100%;">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- Main Admin Content -->
+  <main class="section" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <div class="container">
+
+      <!-- Admin Greeting & Role Banner -->
+      <div class="glass-card" style="padding: 2.25rem 2.5rem; margin-bottom: 2.5rem; background: linear-gradient(135deg, rgba(20, 20, 10, 0.95), rgba(10, 18, 28, 0.98)); border-color: rgba(234, 179, 8, 0.3);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+              <span class="badge-tag badge-gold">Platform Administrator</span>
+              <span class="badge-tag badge-green">● Full Privileges</span>
+            </div>
+            <h1 style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0.35rem; color: #fff;">
+              Admin <span class="text-gradient" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Control Center</span>
+            </h1>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Manage platform membership plans, monitor role-based access, and oversee platform operations.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="dashboard.html" class="btn btn-secondary btn-sm" style="display: flex; align-items: center; gap: 0.4rem;">
+              &larr; Return to Dashboard
+            </a>
+            <button type="button" class="btn btn-primary btn-sm" id="btn-open-create-plan" style="display: flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #F59E0B, #D97706); border-color: #F59E0B;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Create Membership Plan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin Overview Stats -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+        <div class="glass-card" style="padding: 1.5rem;">
+          <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Managed Plans</div>
+          <div id="stat-plan-count" style="font-size: 2.2rem; font-weight: 800; color: #F59E0B; margin-top: 0.25rem;">3 Active</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">Configured platform membership tiers</div>
+        </div>
+        <div class="glass-card" style="padding: 1.5rem;">
+          <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Access Control Mode</div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--teal-primary); margin-top: 0.25rem;">Enforced</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">Strict Agent vs Admin role isolation</div>
+        </div>
+        <div class="glass-card" style="padding: 1.5rem;">
+          <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Registered Agents</div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--navy-primary); margin-top: 0.25rem;">2,840+</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">Real estate agents in network</div>
+        </div>
+      </div>
+
+      <!-- Section: Membership Plan Management -->
+      <div class="glass-card" style="padding: 2rem; margin-bottom: 2.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+          <div>
+            <h2 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.25rem;">Membership Plan Management</h2>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Create, edit, and delete platform membership plans available to agents.
+            </p>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" id="btn-create-plan-top" style="display: inline-flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #F59E0B, #D97706); border-color: #F59E0B;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            + Create New Plan
+          </button>
+        </div>
+
+        <!-- Plans Table Container -->
+        <div class="network-table-wrap">
+          <table class="network-table" id="admin-plans-table">
+            <thead>
+              <tr>
+                <th>Plan Name</th>
+                <th>Price</th>
+                <th>Billing Cycle</th>
+                <th>Key Features</th>
+                <th>Status</th>
+                <th style="text-align: right;">Admin Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-plans-tbody">
+              <!-- Rendered dynamically via AdminAPI -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section: Platform Security & Policy Controls -->
+      <div class="glass-card" style="padding: 2rem;">
+        <h2 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem;">Platform Security &amp; Role Enforcement</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          Platform policy guidelines configured for real estate agent workflows.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+            <div style="font-weight: 700; color: var(--teal-primary); font-size: 0.95rem; margin-bottom: 0.4rem;">Agent Role Scope</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Normal agents have full access to profile management, network tree, properties, chat, and notes. Admin UI and controls are completely hidden and access-gated.
+            </p>
+          </div>
+          <div style="padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+            <div style="font-weight: 700; color: #F59E0B; font-size: 0.95rem; margin-bottom: 0.4rem;">Admin Role Scope</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Administrators possess dual access: full agent tools plus membership creation, editing, deletion, and system oversight.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL: CREATE MEMBERSHIP PLAN
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-create-plan" aria-hidden="true">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 class="modal-title" style="color: #fff;">Create Membership Plan</h3>
+        <button type="button" class="modal-close" onclick="closeAllModals()">&times;</button>
+      </div>
+      <form id="form-create-plan" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div>
+          <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Plan Name</label>
+          <input type="text" id="create-plan-name" class="form-input" placeholder="e.g. Pro Broker Elite" required>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Price Display</label>
+            <input type="text" id="create-plan-price" class="form-input" placeholder="e.g. $99/mo" required>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Billing Cycle</label>
+            <select id="create-plan-billing" class="form-input" required>
+              <option value="Monthly">Monthly</option>
+              <option value="Annual">Annual</option>
+              <option value="Quarterly">Quarterly</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Features &amp; Inclusions</label>
+          <textarea id="create-plan-features" class="form-input" rows="3" placeholder="e.g. Unlimited listings, priority chat, full referral hierarchy export" required></textarea>
+        </div>
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 0.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeAllModals()">Cancel</button>
+          <button type="submit" class="btn btn-primary" style="background: linear-gradient(135deg, #F59E0B, #D97706); border-color: #F59E0B;">Create Plan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: EDIT MEMBERSHIP PLAN
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-edit-plan" aria-hidden="true">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 class="modal-title" style="color: #fff;">Edit Membership Plan</h3>
+        <button type="button" class="modal-close" onclick="closeAllModals()">&times;</button>
+      </div>
+      <form id="form-edit-plan" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <input type="hidden" id="edit-plan-id">
+        <div>
+          <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Plan Name</label>
+          <input type="text" id="edit-plan-name" class="form-input" required>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Price Display</label>
+            <input type="text" id="edit-plan-price" class="form-input" required>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Billing Cycle</label>
+            <select id="edit-plan-billing" class="form-input" required>
+              <option value="Monthly">Monthly</option>
+              <option value="Annual">Annual</option>
+              <option value="Quarterly">Quarterly</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-secondary);">Features &amp; Inclusions</label>
+          <textarea id="edit-plan-features" class="form-input" rows="3" required></textarea>
+        </div>
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 0.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeAllModals()">Cancel</button>
+          <button type="submit" class="btn btn-primary" style="background: linear-gradient(135deg, #F59E0B, #D97706); border-color: #F59E0B;">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+  <script src="js/ai-assistant.js?v=5"></script>
+</body>
+</html>

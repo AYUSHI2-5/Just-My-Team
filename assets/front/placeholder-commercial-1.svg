@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="commSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#09141d"/>
+      <stop offset="100%" stop-color="#122736"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#commSky)"/>
+  <rect x="0" y="340" width="800" height="160" fill="#071017"/>
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#E5B568" stroke-width="4" stroke-dasharray="24 16"/>
+  <!-- Commercial Building Outline -->
+  <rect x="140" y="220" width="160" height="120" fill="#0f2637" stroke="#00D2B4" stroke-width="1.5"/>
+  <rect x="340" y="160" width="220" height="180" fill="#143144" stroke="#00D2B4" stroke-width="2"/>
+  <rect x="600" y="240" width="120" height="100" fill="#0f2637" stroke="#00D2B4" stroke-width="1.5"/>
+  <g fill="#00D2B4" opacity="0.3">
+    <rect x="360" y="180" width="35" height="40"/>
+    <rect x="410" y="180" width="35" height="40"/>
+    <rect x="460" y="180" width="35" height="40"/>
+    <rect x="510" y="180" width="35" height="40"/>
+    <rect x="360" y="240" width="35" height="40"/>
+    <rect x="410" y="240" width="35" height="40"/>
+    <rect x="460" y="240" width="35" height="40"/>
+    <rect x="510" y="240" width="35" height="40"/>
+  </g>
+  <rect x="30" y="30" width="220" height="32" rx="16" fill="rgba(6, 11, 15, 0.85)" stroke="rgba(229, 181, 104, 0.5)"/>
+  <text x="140" y="51" fill="#E5B568" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">18.5 ACRES &bull; COMMERCIAL</text>
+</svg>

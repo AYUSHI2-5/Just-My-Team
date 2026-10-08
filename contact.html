@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Platform Support — Just My Team</title>
+  <meta name="description" content="Get in touch with the Just My Team platform support team.">
+  <link rel="stylesheet" href="css/main.css?v=9">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230877E8'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body class="contact-page">
+
+  <!-- Ambient Light Atmosphere (Contact Page Scoped) -->
+  <div class="contact-ambient-bg" aria-hidden="true">
+    <div class="contact-orb contact-orb-1"></div>
+    <div class="contact-orb contact-orb-2"></div>
+  </div>
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-login">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm join-btn" id="btn-nav-join">
+          Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="properties.html" class="drawer-link">Properties</a></li>
+        <li><a href="blog.html" class="drawer-link">Blog &amp; Insights</a></li>
+        <li><a href="contact.html" class="drawer-link active">Contact</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Agent Sign In</a>
+      <a href="register.html" class="btn btn-primary" style="width: 100%;">Join Code</a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="contact-main-wrapper">
+    
+    <!-- Hero Section -->
+    <section class="contact-hero-section">
+      <div class="contact-hero-container">
+        <!-- Badge -->
+        <div class="contact-hero-pill">
+          <svg class="contact-hero-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>GET IN TOUCH</span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="contact-hero-title">
+          Contact <span class="contact-hero-title-blue">Platform Support</span>
+        </h1>
+
+        <!-- Green Accent Underline Bar -->
+        <div class="contact-hero-accent-bar" aria-hidden="true"></div>
+
+        <!-- Subtitle -->
+        <p class="contact-hero-subtitle">
+          Have questions about the platform or need assistance? Reach out to our team.
+        </p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="contact-section">
+      <div class="container" style="max-width: 820px;">
+        <div class="contact-form-card">
+          
+          <!-- Card Header Inside the Card -->
+          <div class="contact-form-header">
+            <h2 class="contact-card-title">Contact our support team</h2>
+            <p class="contact-card-subtitle">We're here to help with questions about Just My Team.</p>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form contact-form-validate" novalidate>
+            <div class="contact-field-grid">
+
+              <!-- Full Name -->
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name <span class="req-star">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="John Doe" required>
+                <div class="form-error">Please enter your name.</div>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address <span class="req-star">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="john.doe@example.com" required>
+                <div class="form-error">Please enter a valid email address.</div>
+              </div>
+
+              <!-- State -->
+              <div class="form-group">
+                <label class="form-label" for="contact-state">State <span class="req-star">*</span></label>
+                <input type="text" id="contact-state" name="state" class="form-control" placeholder="Texas" required>
+              </div>
+
+              <!-- City -->
+              <div class="form-group">
+                <label class="form-label" for="contact-city">City <span class="req-star">*</span></label>
+                <input type="text" id="contact-city" name="city" class="form-control" placeholder="Austin" required>
+              </div>
+
+              <!-- Topic Dropdown (Full Width) -->
+              <div class="form-group contact-field-full">
+                <label class="form-label" for="contact-topic">Topic</label>
+                <select id="contact-topic" name="topic" class="form-control">
+                  <option value="general">General Inquiry</option>
+                  <option value="registration">Registration &amp; Referral Code</option>
+                  <option value="property">Property Management</option>
+                  <option value="membership">Membership Plans</option>
+                  <option value="account">Account &amp; Security</option>
+                </select>
+              </div>
+
+              <!-- Message Textarea (Full Width) -->
+              <div class="form-group contact-field-full">
+                <label class="form-label" for="contact-notes">Message</label>
+                <textarea id="contact-notes" name="notes" class="form-control" placeholder="How can we help you?"></textarea>
+              </div>
+
+              <!-- Submit Button (Full Width) -->
+              <div class="contact-field-full">
+                <button type="submit" class="btn-submit-support" id="btn-submit-contact">
+                  <span>Send Message</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ai-assistant.js" defer></script>
+  <script src="js/main.js?v=5"></script>
+</body>
+</html>

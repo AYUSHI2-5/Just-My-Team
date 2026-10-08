@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Profile &amp; Network — Just My Team</title>
+  <meta name="description" content="View and manage your personal details, referral network, connected agents, and account settings on Just My Team.">
+  <link rel="stylesheet" href="css/main.css?v=5">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230877E8'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body style="background-color: var(--jmt-light-blue);">
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- ==========================================================================
+       1. NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions (Dynamic via main.js) -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="profile.html" class="btn btn-primary btn-sm active" id="btn-nav-profile">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Profile
+        </a>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="dashboard.html" class="drawer-link">Dashboard</a></li>
+        <li><a href="properties.html" class="drawer-link">Properties</a></li>
+        <li><a href="profile.html" class="drawer-link active">Profile</a></li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="profile.html" class="btn btn-primary" style="width: 100%;">Profile</a>
+      <button type="button" class="btn btn-secondary jmt-logout-trigger" style="width: 100%;">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. PROFILE & NETWORK MAIN CONTAINER
+       ========================================================================== -->
+  <main class="section" style="padding-top: 3.5rem; padding-bottom: 5rem;">
+    <div class="container" style="max-width: 1120px;">
+
+      <!-- Profile Header Card (Visual Reference Alignment) -->
+      <div class="glass-card profile-header-card" id="profile-main-header">
+        
+        <!-- Left: Profile Avatar & Identity -->
+        <div class="profile-header-main">
+          <div class="profile-avatar-wrapper">
+            <div class="profile-avatar-circle" id="prof-avatar-circle">
+              <span id="prof-initials">AM</span>
+            </div>
+            <div class="profile-avatar-status" title="Active Account"></div>
+          </div>
+
+          <div class="profile-identity">
+            <div class="profile-name-row">
+              <h1 id="prof-display-name" class="profile-user-name">Loading...</h1>
+              <span id="prof-display-role" class="badge-tag badge-teal">Agent</span>
+              <span class="badge-tag badge-green">● Active</span>
+            </div>
+
+            <div id="prof-display-email" class="profile-user-email">agent@example.com</div>
+
+            <div class="profile-meta-row">
+              <span class="profile-meta-item" id="prof-display-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span id="prof-meta-location-text">Austin Metro, Texas</span>
+              </span>
+              <span class="profile-meta-divider">•</span>
+              <span class="profile-meta-item" id="prof-display-referral">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Referral Code: <strong id="prof-meta-code-text" style="color: var(--jmt-blue); margin-left: 4px;">JMT-AGENT-4921</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Action Buttons -->
+        <div class="profile-header-actions">
+          <button type="button" class="btn btn-green btn-sm" id="btn-open-invite" onclick="openInviteModal()">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Invite Agent
+          </button>
+          <button type="button" class="btn btn-primary btn-sm" id="btn-open-edit-profile" onclick="openEditProfileModal()">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            Edit Profile
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm jmt-logout-trigger" id="btn-profile-logout" title="Sign Out">
+            Sign Out
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Quick Strip for Agent Tree -->
+      <div class="profile-quick-strip">
+        <div class="quick-strip-content">
+          <div class="quick-strip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <h3 style="font-size: 1.02rem; color: var(--jmt-navy); margin-bottom: 0.2rem; font-weight: 700;">Agent Tree Hierarchy</h3>
+            <p style="font-size: 0.85rem; color: var(--jmt-muted); margin: 0;">View your referral network through a hierarchical visual structure.</p>
+          </div>
+        </div>
+        <a href="index.html#grow-your-team" class="btn btn-secondary btn-sm" style="white-space: nowrap;">
+          View Agent Tree &rarr;
+        </a>
+      </div>
+
+      <!-- ==========================================================================
+           3. MY NETWORK / CONNECTED AGENTS SECTION
+           ========================================================================== -->
+      <div class="network-section-card">
+        
+        <!-- Network Header & Controls -->
+        <div class="network-header-row">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <h2 style="font-size: 1.35rem; color: var(--jmt-navy); margin: 0; font-weight: 800;">My Network</h2>
+              <span id="network-count-badge" class="badge-tag badge-blue">Connected Agents</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--jmt-muted); margin-top: 0.25rem; margin-bottom: 0;">
+              Agents connected to your network through direct referral and email validation.
+            </p>
+          </div>
+
+          <div class="network-controls-row">
+            <div class="network-search-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="search" id="network-search-input" placeholder="Search agents..." aria-label="Search agents">
+            </div>
+            <button type="button" class="btn btn-green btn-sm" onclick="openInviteModal()">
+              + Invite Agent
+            </button>
+          </div>
+        </div>
+
+        <!-- Connected Agents Table -->
+        <div class="table-responsive" id="network-table-wrap">
+          <table class="jmt-table" id="network-agents-table">
+            <thead>
+              <tr>
+                <th style="width: 35%;">Name</th>
+                <th style="width: 32%;">Email</th>
+                <th style="width: 18%;">Status</th>
+                <th style="width: 15%; text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="network-agents-tbody">
+              <!-- Dynamically populated from JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty State (Shown if no connected agents or search yields 0 matches) -->
+        <div id="network-empty-state" class="network-empty-state" style="display: none;">
+          <div class="empty-state-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 id="empty-state-title" style="font-size: 1.15rem; color: var(--jmt-navy); margin-bottom: 0.4rem; font-weight: 700;">No connected agents yet</h3>
+          <p id="empty-state-desc" style="font-size: 0.9rem; color: var(--jmt-muted); max-width: 440px; margin: 0 auto 1.35rem auto; line-height: 1.55;">
+            Invite an agent to start building your referral network and growing your team on Just My Team.
+          </p>
+          <button type="button" class="btn btn-green btn-sm" onclick="openInviteModal()">
+            Invite Agent
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       4. MODAL: EDIT PROFILE & PASSWORD UPDATE
+       ========================================================================== -->
+  <div class="jmt-modal-overlay" id="modal-edit-profile" role="dialog" aria-modal="true" aria-labelledby="edit-profile-title">
+    <div class="jmt-modal-card">
+      <div class="jmt-modal-header">
+        <h3 class="jmt-modal-title" id="edit-profile-title">Profile Management</h3>
+        <button type="button" class="jmt-modal-close" onclick="closeAllModals()" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div class="jmt-modal-body">
+        
+        <!-- Modal Tabs -->
+        <div class="modal-tabs">
+          <button type="button" class="modal-tab-btn active" id="tab-btn-details" onclick="switchProfileTab('details')">Personal Details</button>
+          <button type="button" class="modal-tab-btn" id="tab-btn-password" onclick="switchProfileTab('password')">Update Password</button>
+        </div>
+
+        <!-- Tab 1: Personal Details Form -->
+        <form id="profile-page-form">
+          <div class="form-group">
+            <label class="form-label" for="page-prof-name">Full Name</label>
+            <input type="text" id="page-prof-name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="page-prof-email">Email Address</label>
+            <input type="email" id="page-prof-email" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="page-prof-state">State</label>
+              <input type="text" id="page-prof-state" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="page-prof-city">City</label>
+              <input type="text" id="page-prof-city" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="page-prof-phone">Phone Number (Optional)</label>
+            <input type="tel" id="page-prof-phone" placeholder="+1 (555) 000-0000">
+          </div>
+
+          <div style="background: var(--jmt-blue-light); border: 1px solid rgba(8, 119, 232, 0.2); border-radius: var(--radius-md); padding: 0.9rem 1.1rem; margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--jmt-muted); font-weight: 700; letter-spacing: 0.5px;">Referral Validation Code</div>
+              <div id="page-prof-referral" style="font-size: 1.05rem; font-weight: 800; color: var(--jmt-blue); font-family: var(--font-mono); margin-top: 0.15rem;">JMT-AGENT-4921</div>
+            </div>
+            <span class="badge-tag badge-teal">Active</span>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--jmt-border);">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="closeAllModals()">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-sm">Save Details</button>
+          </div>
+        </form>
+
+        <!-- Tab 2: Password Update Form -->
+        <form id="password-update-form" style="display: none;">
+          <div class="form-group">
+            <label class="form-label" for="curr-pass">Current Password</label>
+            <input type="password" id="curr-pass" placeholder="Enter current password" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="new-pass">New Password</label>
+            <input type="password" id="new-pass" placeholder="Enter new password" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="conf-pass">Confirm New Password</label>
+            <input type="password" id="conf-pass" placeholder="Confirm new password" required>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--jmt-border);">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="closeAllModals()">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-sm">Update Password</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       5. MODAL: INVITE NEW AGENT VIA EMAIL VALIDATION
+       ========================================================================== -->
+  <div class="jmt-modal-overlay" id="modal-invite-agent" role="dialog" aria-modal="true" aria-labelledby="invite-agent-title">
+    <div class="jmt-modal-card">
+      <div class="jmt-modal-header">
+        <h3 class="jmt-modal-title" id="invite-agent-title">Invite New Agent</h3>
+        <button type="button" class="jmt-modal-close" onclick="closeAllModals()" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <form id="invite-agent-form">
+        <div class="jmt-modal-body">
+          <p style="font-size: 0.88rem; color: var(--jmt-muted); margin-bottom: 1.25rem; line-height: 1.55;">
+            Invite a real estate agent to connect to your network on Just My Team. They will receive an email invitation linked directly to your referral downline.
+          </p>
+
+          <div class="form-group">
+            <label class="form-label" for="invite-agent-email">Agent Email Address *</label>
+            <input type="email" id="invite-agent-email" placeholder="colleague@realestate.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="invite-agent-name">Agent Name (Optional)</label>
+            <input type="text" id="invite-agent-name" placeholder="First and Last Name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="invite-agent-role">Specialization / Focus Area</label>
+            <input type="text" id="invite-agent-role" placeholder="e.g. Land Specialist, Commercial Broker, Residential">
+          </div>
+
+          <div style="background: var(--jmt-green-light); border: 1px solid rgba(24, 169, 74, 0.25); border-radius: var(--radius-md); padding: 0.85rem 1rem; margin-top: 0.5rem; font-size: 0.84rem; color: var(--jmt-navy);">
+            <div style="font-weight: 700; color: var(--jmt-green-dark); margin-bottom: 0.2rem;">Email Validation Active</div>
+            Your referral code <strong id="invite-ref-preview" style="color: var(--jmt-navy);">JMT-AGENT-4921</strong> will be automatically embedded in the invitation link.
+          </div>
+        </div>
+
+        <div class="jmt-modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="closeAllModals()">Cancel</button>
+          <button type="submit" class="btn btn-green btn-sm" id="btn-submit-invitation">
+            Send Invitation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       6. MODAL: VIEW AGENT PROFILE DETAILS
+       ========================================================================== -->
+  <div class="jmt-modal-overlay" id="modal-view-agent" role="dialog" aria-modal="true" aria-labelledby="view-agent-title">
+    <div class="jmt-modal-card">
+      <div class="jmt-modal-header">
+        <h3 class="jmt-modal-title" id="view-agent-title">Connected Agent Profile</h3>
+        <button type="button" class="jmt-modal-close" onclick="closeAllModals()" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div class="jmt-modal-body">
+        
+        <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--jmt-border);">
+          <div class="profile-avatar-circle" id="agent-modal-avatar" style="width: 64px; height: 64px; font-size: 1.4rem;">
+            SJ
+          </div>
+          <div>
+            <h4 id="agent-modal-name" style="font-size: 1.35rem; color: var(--jmt-navy); margin-bottom: 0.2rem; font-weight: 800;">Sarah Jenkins</h4>
+            <div id="agent-modal-role" style="font-size: 0.88rem; color: var(--jmt-blue); font-weight: 600;">Senior Land Specialist</div>
+            <div id="agent-modal-location" style="font-size: 0.82rem; color: var(--jmt-muted); margin-top: 0.15rem;">Travis County, TX</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="background: var(--jmt-light-blue); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--jmt-border);">
+            <div style="font-size: 0.74rem; text-transform: uppercase; color: var(--jmt-muted); font-weight: 700; letter-spacing: 0.5px;">Email</div>
+            <div id="agent-modal-email" style="font-size: 0.88rem; font-weight: 600; color: var(--jmt-navy); margin-top: 0.2rem; word-break: break-all;">sarah.jenkins@realtynet.com</div>
+          </div>
+
+          <div style="background: var(--jmt-light-blue); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--jmt-border);">
+            <div style="font-size: 0.74rem; text-transform: uppercase; color: var(--jmt-muted); font-weight: 700; letter-spacing: 0.5px;">Status</div>
+            <div style="margin-top: 0.2rem;"><span id="agent-modal-status" class="badge-tag badge-green">Active Agent</span></div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div style="background: var(--jmt-light-blue); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--jmt-border);">
+            <div style="font-size: 0.74rem; text-transform: uppercase; color: var(--jmt-muted); font-weight: 700; letter-spacing: 0.5px;">Phone</div>
+            <div id="agent-modal-phone" style="font-size: 0.88rem; font-weight: 600; color: var(--jmt-navy); margin-top: 0.2rem;">+1 (512) 555-0144</div>
+          </div>
+
+          <div style="background: var(--jmt-light-blue); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--jmt-border);">
+            <div style="font-size: 0.74rem; text-transform: uppercase; color: var(--jmt-muted); font-weight: 700; letter-spacing: 0.5px;">Connected Since</div>
+            <div id="agent-modal-joined" style="font-size: 0.88rem; font-weight: 600; color: var(--jmt-navy); margin-top: 0.2rem;">Mar 2026</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="jmt-modal-footer">
+        <a href="index.html#grow-your-team" class="btn btn-secondary btn-sm">View in Agent Tree &rarr;</a>
+        <button type="button" class="btn btn-primary btn-sm" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       7. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5"></script>
+  <script src="js/ai-assistant.js?v=5"></script>
+</body>
+</html>

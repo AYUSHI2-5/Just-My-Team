@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform Guides &amp; Overview — Just My Team</title>
+  <meta name="description" content="Helpful walk-throughs on using your Agent Dashboard, managing properties, navigating the Agent Tree, and taking personal notes.">
+  <link rel="stylesheet" href="css/main.css?v=8">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230877E8'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body class="blog-body-page">
+
+  <!-- Ambient Light Atmosphere (Blog Page Scoped) -->
+  <div class="blog-ambient-bg" aria-hidden="true">
+    <div class="blog-orb blog-orb-1"></div>
+    <div class="blog-orb blog-orb-2"></div>
+    <div class="blog-orb blog-orb-3"></div>
+  </div>
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-login">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm join-btn" id="btn-nav-join">
+          Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="properties.html" class="drawer-link">Properties</a></li>
+        <li><a href="blog.html" class="drawer-link active">Blog</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Agent Sign In</a>
+      <a href="register.html" class="btn btn-primary" style="width: 100%;">Join Code</a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="blog-main-wrapper">
+
+    <!-- Hero Section -->
+    <section class="blog-hero-section">
+      <!-- Decorative Light Dotted Patterns -->
+      <div class="blog-hero-dots blog-hero-dots-left" aria-hidden="true"></div>
+      <div class="blog-hero-dots blog-hero-dots-right" aria-hidden="true"></div>
+
+      <div class="blog-hero-container">
+        <!-- Small Pill Badge -->
+        <div class="blog-hero-pill">
+          <svg class="blog-hero-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          <span>PLATFORM GUIDES</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="blog-hero-title">
+          Platform <span class="blog-hero-title-blue">Guides &amp; Overview</span>
+        </h1>
+
+        <!-- Green Accent Underline -->
+        <div class="blog-hero-accent-bar" aria-hidden="true"></div>
+
+        <!-- Subtitle -->
+        <p class="blog-hero-subtitle">
+          Helpful walk-throughs on using your Agent Dashboard, managing properties,
+          navigating the Agent Tree, and taking personal notes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Guides Container -->
+    <div class="container blog-content-container">
+
+      <!-- ==================================================
+           FEATURED BLOG (Large Dark Navy Card)
+           ================================================== -->
+      <section class="blog-featured-section" aria-label="Featured Guide">
+        <a href="blog-detail.html" class="blog-featured-card" aria-label="Read Featured Guide: Getting Started with the Agent Dashboard & Network">
+          
+          <!-- Left: Large Featured Image (~55%) -->
+          <div class="blog-featured-media">
+            <img 
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" 
+              alt="Golden sunrise landscape representing Agent Dashboard and Network" 
+              class="blog-featured-img"
+              loading="eager"
+            />
+            <!-- Overlay Badge -->
+            <div class="blog-featured-img-badge">
+              <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              <span>Platform Guide <span class="badge-dot">•</span> 3 min read</span>
+            </div>
+          </div>
+
+          <!-- Right: Featured Content (~45%) -->
+          <div class="blog-featured-info">
+            <!-- Category Tag -->
+            <div class="blog-featured-category">
+              <span class="blog-featured-cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </span>
+              <span>Platform Overview</span>
+            </div>
+
+            <!-- Title -->
+            <h2 class="blog-featured-title">Getting Started with the Agent Dashboard &amp; Network</h2>
+
+            <!-- Description -->
+            <p class="blog-featured-desc">
+              Learn how to navigate your agent dashboard, view network activity,
+              manage your profile, and access properties and chat from one central
+              location.
+            </p>
+
+            <!-- Footer: JMT Meta and Circular Blue Arrow Button -->
+            <div class="blog-featured-footer">
+              <div class="blog-featured-author">
+                <span class="blog-featured-brand-tag">JMT</span>
+                <div class="blog-featured-author-name">Just My Team Guide</div>
+                <div class="blog-featured-author-sub">Platform Overview</div>
+              </div>
+
+              <div class="blog-circle-btn blog-circle-btn-primary" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+
+        </a>
+      </section>
+
+      <!-- ==================================================
+           BLOG ARTICLES GRID (2-Column SaaS Grid)
+           ================================================== -->
+      <section class="blog-grid-section" aria-label="Guides Grid">
+        <div class="blog-articles-grid">
+
+          <!-- ARTICLE 1: PROPERTY GUIDE -->
+          <a href="blog-detail-2.html" class="blog-guide-card" aria-label="Read Guide: How to Create, View and Edit Properties">
+            <div class="blog-guide-media">
+              <img 
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" 
+                alt="Majestic mountains and pines representing Property Guide" 
+                class="blog-guide-img"
+                loading="lazy"
+              />
+              <!-- Category Pill Overlay -->
+              <div class="blog-guide-badge cat-property">
+                <svg class="guide-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Property Guide</span>
+              </div>
+            </div>
+
+            <div class="blog-guide-content">
+              <h3 class="blog-guide-title">How to Create, View and Edit Properties</h3>
+              <p class="blog-guide-desc">
+                Step-by-step guide on creating, editing, and managing properties,
+                including filtering by state and city, and using location mapping.
+              </p>
+
+              <div class="blog-guide-footer">
+                <div class="blog-guide-meta">
+                  <svg class="meta-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Property Guide <span class="meta-separator">•</span> 5 min read</span>
+                </div>
+
+                <div class="blog-circle-btn blog-circle-btn-subtle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- ARTICLE 2: AGENT TREE GUIDE -->
+          <a href="blog-detail-3.html" class="blog-guide-card" aria-label="Read Guide: Navigating the Agent Tree & Sending Invitations">
+            <div class="blog-guide-media">
+              <img 
+                src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=900&q=80" 
+                alt="Workspace with invitation envelope badge for Agent Tree Guide" 
+                class="blog-guide-img"
+                loading="lazy"
+              />
+              
+              <!-- Stylized Envelope Badge Graphic as in Master Reference Image -->
+              <div class="blog-guide-media-graphic agent-tree-graphic" aria-hidden="true">
+                <div class="graphic-envelope">
+                  <svg viewBox="0 0 64 48" fill="none" class="envelope-svg">
+                    <rect x="2" y="2" width="60" height="44" rx="6" fill="#FFFFFF" stroke="#0877E8" stroke-width="3"/>
+                    <path d="M4 6L32 28L60 6" stroke="#0877E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="envelope-counter">1</span>
+                </div>
+              </div>
+
+              <!-- Category Pill Overlay -->
+              <div class="blog-guide-badge cat-agent-tree">
+                <svg class="guide-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span>Agent Tree Guide</span>
+              </div>
+            </div>
+
+            <div class="blog-guide-content">
+              <h3 class="blog-guide-title">Navigating the Agent Tree &amp; Sending Invitations</h3>
+              <p class="blog-guide-desc">
+                Understand how the hierarchical Agent Tree displays your network and
+                how to send email invitations to new agents.
+              </p>
+
+              <div class="blog-guide-footer">
+                <div class="blog-guide-meta">
+                  <svg class="meta-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Agent Tree Guide <span class="meta-separator">•</span> 4 min read</span>
+                </div>
+
+                <div class="blog-circle-btn blog-circle-btn-subtle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- ARTICLE 3: PERSONAL NOTES GUIDE -->
+          <a href="blog-detail.html#notes" class="blog-guide-card" aria-label="Read Guide: Using Personal Notes Effectively">
+            <div class="blog-guide-media">
+              <img 
+                src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80" 
+                alt="Open notebook with notes and desk pen" 
+                class="blog-guide-img"
+                loading="lazy"
+              />
+
+              <!-- Stylized Notes Graphic overlay as in Master Reference Image -->
+              <div class="blog-guide-media-graphic notes-graphic" aria-hidden="true">
+                <span class="notes-graphic-text">Notes</span>
+              </div>
+
+              <!-- Category Pill Overlay -->
+              <div class="blog-guide-badge cat-notes">
+                <svg class="guide-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Personal Notes Guide</span>
+              </div>
+            </div>
+
+            <div class="blog-guide-content">
+              <h3 class="blog-guide-title">Using Personal Notes Effectively</h3>
+              <p class="blog-guide-desc">
+                Learn how to create, edit, filter, and export personal notes to keep
+                your information organized.
+              </p>
+
+              <div class="blog-guide-footer">
+                <div class="blog-guide-meta">
+                  <svg class="meta-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Personal Notes Guide <span class="meta-separator">•</span> 3 min read</span>
+                </div>
+
+                <div class="blog-circle-btn blog-circle-btn-subtle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- ARTICLE 4: CHAT GUIDE -->
+          <a href="blog-detail.html#chat" class="blog-guide-card" aria-label="Read Guide: Chat & Group Messaging">
+            <div class="blog-guide-media">
+              <img 
+                src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=900&q=80" 
+                alt="Typing on laptop with floating chat messaging bubble overlay" 
+                class="blog-guide-img"
+                loading="lazy"
+              />
+
+              <!-- Stylized Floating Chat Bubbles as in Master Reference Image -->
+              <div class="blog-guide-media-graphic chat-graphic" aria-hidden="true">
+                <div class="chat-bubble-primary">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                  </svg>
+                </div>
+                <div class="chat-bubble-secondary">
+                  <span>•••</span>
+                </div>
+              </div>
+
+              <!-- Category Pill Overlay -->
+              <div class="blog-guide-badge cat-chat">
+                <svg class="guide-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Chat Guide</span>
+              </div>
+            </div>
+
+            <div class="blog-guide-content">
+              <h3 class="blog-guide-title">Chat &amp; Group Messaging</h3>
+              <p class="blog-guide-desc">
+                Explore 1-to-1 direct messaging and group chats with owner-only controls
+                and chat management.
+              </p>
+
+              <div class="blog-guide-footer">
+                <div class="blog-guide-meta">
+                  <svg class="meta-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Chat Guide <span class="meta-separator">•</span> 4 min read</span>
+                </div>
+
+                <div class="blog-circle-btn blog-circle-btn-subtle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5"></script>
+  <script src="js/ai-assistant.js?v=5"></script>
+</body>
+</html>

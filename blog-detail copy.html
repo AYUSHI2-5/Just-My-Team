@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with Just My Team — Just My Team</title>
+  <meta name="description" content="A guide to getting started with Just My Team: dashboard overview, network management, and core features.">
+  <link rel="stylesheet" href="css/main.css?v=4">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A5F'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- Ambient Background Atmosphere -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="bg-ambient-orb orb-1"></div>
+    <div class="bg-ambient-orb orb-2"></div>
+    <div class="bg-ambient-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-login">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm join-btn" id="btn-nav-join">
+          Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="properties.html" class="drawer-link">Properties</a></li>
+        <li><a href="blog.html" class="drawer-link active">Blog &amp; Insights</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Agent Sign In</a>
+      <a href="register.html" class="btn btn-primary" style="width: 100%;">Join Code</a>
+    </div>
+  </aside>
+
+  <!-- Article Section -->
+  <main class="blog-article-page-wrapper" style="padding-top: 5rem;">
+    <div class="blog-article-page">
+      
+      <!-- Breadcrumb & Back Link -->
+      <div>
+        <a href="blog.html" class="blog-back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to All Guides
+        </a>
+      </div>
+
+      <div class="blog-article-header">
+        <div class="blog-article-badge-row">
+          <span class="blog-article-pill pill-gold">Platform Guide</span>
+          <span class="blog-article-pill">Overview</span>
+          <span class="blog-article-pill pill-secondary">3 min read</span>
+        </div>
+
+        <h1 class="blog-article-title">
+          Getting Started with the Agent Dashboard &amp; Network
+        </h1>
+
+        <div class="blog-article-meta-bar">
+          <span>By <strong>Just My Team Support</strong></span>
+          <span class="blog-meta-dot">•</span>
+          <span>Platform Overview</span>
+        </div>
+      </div>
+
+      <!-- Main Feature Image -->
+      <div class="blog-article-hero-wrap">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=85" alt="Platform Overview" class="blog-article-hero-img" />
+      </div>
+
+      <!-- Main Article Layout -->
+      <div class="blog-article-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="blog-article-sidebar">
+          <div class="blog-article-toc">
+            <div class="blog-toc-heading">TABLE OF CONTENTS</div>
+            <nav class="blog-toc-list">
+              <a href="#overview" class="blog-toc-link">01 Dashboard Overview</a>
+              <a href="#network" class="blog-toc-link">02 Managing Your Network</a>
+              <a href="#properties" class="blog-toc-link">03 Properties &amp; Notes</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Article Content -->
+        <div class="blog-article-body">
+          <section id="overview" class="blog-article-section">
+            <h2>1. Dashboard Overview</h2>
+            <p>
+              The Agent Dashboard is your central hub on Just My Team. Once you sign in, you can see an overview of your activity, monitor network status, and quickly access core features including properties, chat, and personal notes.
+            </p>
+          </section>
+
+          <section id="network" class="blog-article-section">
+            <h2>2. Managing Your Network</h2>
+            <p>
+              From the profile and network section, agents can view connected agents, inspect detailed profiles, and explore the hierarchical Agent Tree. You can also invite new agents using email validation.
+            </p>
+          </section>
+
+          <section id="properties" class="blog-article-section">
+            <h2>3. Properties &amp; Notes</h2>
+            <p>
+              Easily create, view, edit, and list properties associated with your account with dynamic state and city selection. Keep your personal notes organized with date filtering and export options.
+            </p>
+          </section>
+
+          <div class="blog-article-cta">
+            <h3 class="blog-cta-title">Ready to access your dashboard?</h3>
+            <p class="blog-cta-desc">Register with a referral code or sign in to your account.</p>
+            <a href="register.html" class="blog-cta-btn">Register Now</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5"></script>
+  <script src="js/ai-assistant.js?v=5"></script>
+</body>
+</html>

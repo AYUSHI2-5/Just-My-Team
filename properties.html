@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties — Just My Team</title>
+  <meta name="description" content="View, create, edit, and list properties on Just My Team with dynamic state and city locations.">
+  <link rel="stylesheet" href="css/main.css?v=4">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A5F'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- Ambient Light Atmosphere -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="bg-ambient-orb orb-1"></div>
+    <div class="bg-ambient-orb orb-2"></div>
+    <div class="bg-ambient-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link active">Properties</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-login">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm join-btn" id="btn-nav-join">
+          Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li><a href="properties.html" class="drawer-link active">Properties</a></li>
+        <li><a href="blog.html" class="drawer-link">Blog &amp; Insights</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Agent Sign In</a>
+      <a href="register.html" class="btn btn-primary" style="width: 100%;">Join Code</a>
+    </div>
+  </aside>
+
+  <!-- Main Properties Section -->
+  <main>
+    
+    <!-- Hero Header & Catalog Section -->
+    <section class="section" style="padding-top: 4.5rem; padding-bottom: 4rem; position: relative;">
+      <div class="properties-page-container">
+        
+        <!-- Centered Header -->
+        <div class="properties-header">
+          <div class="properties-badge">Property Management</div>
+          <h1 class="properties-main-title">
+            Property <span class="text-gradient">Listings</span>
+          </h1>
+          <p class="properties-subtitle">
+            Create, view, edit, and list properties associated with your account. Filter and search properties by category, location, and details.
+          </p>
+        </div>
+
+        <!-- Filter UI Toolbar -->
+        <div class="properties-filter-panel">
+          <div class="filter-panel-top">
+            <div class="filter-panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+              Filter Properties
+            </div>
+            <div class="filter-panel-actions">
+              <span class="filter-count-badge" id="properties-count-badge">SHOWING 6 OF 6 PROPERTIES</span>
+              <button type="button" id="btn-reset-filters" class="filter-reset-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Reset Filters
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-controls-grid">
+            <!-- Type Filter -->
+            <div class="filter-field">
+              <label for="filter-property-type" class="filter-label">Property Type</label>
+              <select id="filter-property-type" class="filter-select">
+                <option value="all">All Categories</option>
+                <option value="Land">Land</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Residential">Residential</option>
+              </select>
+            </div>
+
+            <!-- Min Filter -->
+            <div class="filter-field">
+              <label for="filter-min-acres" class="filter-label">Min Size</label>
+              <select id="filter-min-acres" class="filter-select">
+                <option value="0">Any Min</option>
+                <option value="20">20+ AC</option>
+                <option value="50">50+ AC</option>
+                <option value="100">100+ AC</option>
+              </select>
+            </div>
+
+            <!-- Max Filter -->
+            <div class="filter-field">
+              <label for="filter-max-acres" class="filter-label">Max Size</label>
+              <select id="filter-max-acres" class="filter-select">
+                <option value="999999">Any Max</option>
+                <option value="50">Up to 50 AC</option>
+                <option value="100">Up to 100 AC</option>
+                <option value="500">Up to 500 AC</option>
+              </select>
+            </div>
+
+            <!-- Location Search -->
+            <div class="filter-field">
+              <label for="filter-search-loc" class="filter-label">Location / State / City</label>
+              <div class="filter-search-wrap">
+                <input 
+                  type="text" 
+                  id="filter-search-loc"
+                  placeholder="e.g. Texas, Austin, North Carolina..." 
+                  class="filter-input"
+                  aria-label="Location or Keyword Filter"
+                />
+                <svg class="filter-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Properties Grid -->
+        <div class="properties-grid" id="properties-catalog-grid">
+          
+          <!-- Property Card 101 -->
+          <div class="property-card" data-id="prop-101" id="prop-101">
+            <a href="property-detail.html" class="property-img-wrap" aria-label="Inspect Rolling Hills Property">
+              <img class="property-img" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Rolling Hills Property" loading="lazy" />
+              <span class="property-type-tag">Land</span>
+              <span class="property-status-tag">Active</span>
+            </a>
+            <div class="property-content">
+              <div class="property-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Austin, Texas
+              </div>
+              <h3 class="property-card-title">
+                <a href="property-detail.html">Rolling Hills Property</a>
+              </h3>
+              <div class="property-specs">
+                <div class="spec-item"><div class="spec-val">140 AC</div><div class="spec-lbl">Size</div></div>
+                <div class="spec-item"><div class="spec-val">$4,250</div><div class="spec-lbl">Price/Acre</div></div>
+                <div class="spec-item"><div class="spec-val">TX-990...</div><div class="spec-lbl">APN Code</div></div>
+              </div>
+              <div class="property-footer">
+                <div class="property-price-wrap">
+                  <div class="price-main">$595,000</div>
+                  <div class="price-unit">Total Asking Price</div>
+                </div>
+                <a href="property-detail.html" class="property-view-link">
+                  View Property <span class="arrow-icon">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Property Card 102 -->
+          <div class="property-card" data-id="prop-102" id="prop-102">
+            <a href="property-detail-102.html" class="property-img-wrap" aria-label="Inspect Mountain View Tract">
+              <img class="property-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Mountain View Tract" loading="lazy" />
+              <span class="property-type-tag">Residential</span>
+              <span class="property-status-tag">Active</span>
+            </a>
+            <div class="property-content">
+              <div class="property-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Ashe, North Carolina
+              </div>
+              <h3 class="property-card-title">
+                <a href="property-detail-102.html">Mountain View Tract</a>
+              </h3>
+              <div class="property-specs">
+                <div class="spec-item"><div class="spec-val">48 AC</div><div class="spec-lbl">Size</div></div>
+                <div class="spec-item"><div class="spec-val">$6,791</div><div class="spec-lbl">Price/Acre</div></div>
+                <div class="spec-item"><div class="spec-val">NC-102...</div><div class="spec-lbl">APN Code</div></div>
+              </div>
+              <div class="property-footer">
+                <div class="property-price-wrap">
+                  <div class="price-main">$326,000</div>
+                  <div class="price-unit">Total Asking Price</div>
+                </div>
+                <a href="property-detail-102.html" class="property-view-link">
+                  View Property <span class="arrow-icon">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Property Card 103 -->
+          <div class="property-card" data-id="prop-103" id="prop-103">
+            <a href="property-detail-103.html" class="property-img-wrap" aria-label="Inspect Commercial Development Tract">
+              <img class="property-img" src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Commercial Development Tract" loading="lazy" />
+              <span class="property-type-tag">Commercial</span>
+              <span class="property-status-tag">Active</span>
+            </a>
+            <div class="property-content">
+              <div class="property-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Pinal, Arizona
+              </div>
+              <h3 class="property-card-title">
+                <a href="property-detail-103.html">Commercial Development Tract</a>
+              </h3>
+              <div class="property-specs">
+                <div class="spec-item"><div class="spec-val">18.5 AC</div><div class="spec-lbl">Size</div></div>
+                <div class="spec-item"><div class="spec-val">$48,000</div><div class="spec-lbl">Price/Acre</div></div>
+                <div class="spec-item"><div class="spec-val">AZ-441...</div><div class="spec-lbl">APN Code</div></div>
+              </div>
+              <div class="property-footer">
+                <div class="property-price-wrap">
+                  <div class="price-main">$888,000</div>
+                  <div class="price-unit">Total Asking Price</div>
+                </div>
+                <a href="property-detail-103.html" class="property-view-link">
+                  View Property <span class="arrow-icon">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5"></script>
+  <script src="js/ai-assistant.js?v=5"></script>
+</body>
+</html>

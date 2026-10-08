@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just My Team — Real Estate Agent Network Community</title>
+  <meta name="description" content="A stronger real estate community starts with you. Connect with agents, manage properties, collaborate with your team and stay organized — all in one platform.">
+  <link rel="stylesheet" href="css/main.css?v=7">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230877E8'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- Ambient Light Atmosphere -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="bg-ambient-orb orb-1"></div>
+    <div class="bg-ambient-orb orb-2"></div>
+    <div class="bg-ambient-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Pure CSS Mobile Toggle Checkbox -->
+  <input type="checkbox" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+
+  <!-- ==========================================================================
+       NAVIGATION BAR (WHITE HEADER)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+        <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Nav Actions (Dynamic via main.js) -->
+      <div class="nav-actions nav-actions-desktop">
+        <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-login">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm join-btn" id="btn-nav-join">
+          Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Label -->
+      <label for="nav-toggle" class="hamburger-label" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <label for="nav-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+        </div>
+        <label for="nav-toggle" class="modal-close-btn" aria-label="Close menu">&times;</label>
+      </div>
+
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link active">Home</a></li>
+        <li><a href="properties.html" class="drawer-link">Properties</a></li>
+        <li><a href="blog.html" class="drawer-link">Blog &amp; Insights</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Agent Sign In</a>
+      <a href="register.html" class="btn btn-primary" style="width: 100%;">Join Code</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       1. HERO SECTION (MASTER REFERENCE COMPOSITION)
+       ========================================================================== -->
+  <section class="hero-saas-section hero" id="hero">
+    <div class="hero-container">
+      
+      <!-- Two Column Hero Layout -->
+      <div class="hero-main-layout">
+        
+        <!-- Left Side: Content & Actions -->
+        <div class="hero-left-content hero-content">
+          
+          <div class="hero-category-badge hero-badge">
+            REAL ESTATE AGENT NETWORK
+          </div>
+
+          <h1 class="hero-main-title">
+            <span class="hero-title-navy">A Stronger</span>
+            <span class="hero-title-blue">Real Estate Community</span>
+            <span class="hero-title-green-wrap">
+              Starts With You!
+              <svg class="hero-green-swoosh" viewBox="0 0 260 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 10C55 3.5 155 1.5 257 11" stroke="#18A94A" stroke-width="4.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </h1>
+
+          <p class="hero-supporting-desc">
+            Connect with agents, manage properties, collaborate with your team and stay organized — all in one platform.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-actions-row hero-buttons">
+            <a href="register.html" class="btn-hero-primary" id="hero-cta-join">
+              Join with Referral Code &rarr;
+            </a>
+            <a href="login.html" class="btn-hero-secondary" id="hero-cta-login">
+              Agent Sign In
+            </a>
+          </div>
+
+          <!-- Trust / Benefit Indicators Row with Green Circles -->
+          <div class="hero-trust-indicators hero-benefits">
+            <span class="trust-indicator-item">
+              <span class="trust-check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              Easy to use
+            </span>
+            <span class="trust-separator">|</span>
+            <span class="trust-indicator-item">
+              <span class="trust-check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              Reliable &amp; Secure
+            </span>
+            <span class="trust-separator">|</span>
+            <span class="trust-indicator-item">
+              <span class="trust-check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              Built for Agents
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Professional Team & Modern House Visual -->
+        <div class="hero-visual-composition hero-visual">
+          <img 
+            src="assets/front/hero-team-master.png" 
+            alt="Real Estate Community Professionals" 
+            class="hero-img-element"
+          />
+        </div>
+
+      </div>
+
+      <!-- Bottom Floating 5-Feature Strip -->
+      <div class="hero-feature-strip-wrap">
+        <div class="hero-feature-strip">
+          
+          <!-- 1. Grow Your Network -->
+          <div class="feature-strip-item">
+            <div class="feature-strip-icon-circle circle-green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="feature-strip-text">
+              <h3 class="feature-strip-title">Grow<br>Your Network</h3>
+              <p class="feature-strip-desc">Connect with agents and expand your reach</p>
+            </div>
+          </div>
+
+          <!-- 2. Manage Properties -->
+          <div class="feature-strip-item">
+            <div class="feature-strip-icon-circle circle-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <div class="feature-strip-text">
+              <h3 class="feature-strip-title">Manage<br>Properties</h3>
+              <p class="feature-strip-desc">List, track and manage your properties easily</p>
+            </div>
+          </div>
+
+          <!-- 3. Private & Group Chat -->
+          <div class="feature-strip-item">
+            <div class="feature-strip-icon-circle circle-purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <div class="feature-strip-text">
+              <h3 class="feature-strip-title">Private &amp;<br>Group Chat</h3>
+              <p class="feature-strip-desc">Communicate and collaborate seamlessly</p>
+            </div>
+          </div>
+
+          <!-- 4. Personal Notes & Organization -->
+          <div class="feature-strip-item">
+            <div class="feature-strip-icon-circle circle-orange">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <div class="feature-strip-text">
+              <h3 class="feature-strip-title">Personal Notes<br>&amp; Organization</h3>
+              <p class="feature-strip-desc">Keep your information organized</p>
+            </div>
+          </div>
+
+          <!-- 5. Notifications & Updates -->
+          <div class="feature-strip-item">
+            <div class="feature-strip-icon-circle circle-red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <div class="feature-strip-text">
+              <h3 class="feature-strip-title">Notifications<br>&amp; Updates</h3>
+              <p class="feature-strip-desc">Stay informed with real-time updates</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+      <!-- ==========================================================================
+       FEATURES SECTION (BALANCED EDITORIAL TWO-COLUMN LAYOUT)
+       ========================================================================== -->
+  <section class="features-editorial-section features-home-section" id="features">
+    <div class="features-bg-orb features-bg-orb-1" aria-hidden="true"></div>
+    <div class="features-bg-orb features-bg-orb-2" aria-hidden="true"></div>
+
+    <div class="container features-editorial-container">
+      <div class="features-editorial-layout">
+
+        <!-- LEFT COLUMN: Editorial Typography & Feature Highlights (~45%) -->
+        <div class="features-editorial-content">
+          <!-- Badge -->
+          <div class="features-editorial-badge">FEATURES</div>
+
+          <!-- Heading -->
+          <h2 class="features-editorial-title">
+            Everything You Need in <span class="features-title-highlight">One Platform</span>
+          </h2>
+
+          <!-- Subtitle -->
+          <p class="features-editorial-subtitle">
+            From managing your network to handling properties, communication, and notes &mdash; Just My Team gives you the tools to grow and stay organized.
+          </p>
+
+          <!-- Feature Highlights (Compact list with aligned icons and typography) -->
+          <div class="features-editorial-list" role="list">
+
+            <!-- 1. Easy Registration -->
+            <div class="features-editorial-item" role="listitem">
+              <div class="features-item-icon-wrap icon-wrap-blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <line x1="19" y1="8" x2="19" y2="14"></line>
+                  <line x1="22" y1="11" x2="16" y2="11"></line>
+                </svg>
+              </div>
+              <div class="features-item-text">
+                <h3 class="features-item-title">Easy Registration</h3>
+                <p class="features-item-desc">Create your account with referral validation and get started securely.</p>
+              </div>
+            </div>
+
+            <!-- 2. Profile Management -->
+            <div class="features-editorial-item" role="listitem">
+              <div class="features-item-icon-wrap icon-wrap-green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="7" r="4"></circle>
+                  <path d="M5.5 21a8.38 8.38 0 0 1 13 0"></path>
+                  <circle cx="19" cy="11" r="2"></circle>
+                  <path d="M19 8v1M19 13v1M16 11h1M21 11h1"></path>
+                </svg>
+              </div>
+              <div class="features-item-text">
+                <h3 class="features-item-title">Profile Management</h3>
+                <p class="features-item-desc">View and edit your personal details and update your password anytime.</p>
+              </div>
+            </div>
+
+            <!-- 3. Agent Network -->
+            <div class="features-editorial-item" role="listitem">
+              <div class="features-item-icon-wrap icon-wrap-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="features-item-text">
+                <h3 class="features-item-title">Agent Network</h3>
+                <p class="features-item-desc">Connect with agents, view their profiles, and grow your professional network.</p>
+              </div>
+            </div>
+
+            <!-- 4. Agent Tree -->
+            <div class="features-editorial-item" role="listitem">
+              <div class="features-item-icon-wrap icon-wrap-amber">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <circle cx="6" cy="19" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <path d="M12 8v4M6 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"></path>
+                </svg>
+              </div>
+              <div class="features-item-text">
+                <h3 class="features-item-title">Agent Tree</h3>
+                <p class="features-item-desc">Get a clear hierarchical view of your referral network.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Centered Supporting Platform Visual (~55%) -->
+        <div class="features-editorial-visual">
+          <div class="features-visual-stage">
+            <div class="features-stage-glow" aria-hidden="true"></div>
+            
+            <div class="features-device-wrapper">
+              <img 
+                src="assets/front/features-platform-visual.png" 
+                alt="Just My Team Platform Interface &amp; Feature Highlights" 
+                class="features-platform-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. WHY CHOOSE US SECTION
+       ========================================================================== -->
+  <section class="why-choose-section" id="why-choose-us">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-center">
+        <div class="section-badge-pill">WHY CHOOSE US</div>
+        <h2 class="section-main-heading">Why Choose Just My Team?</h2>
+        <p class="section-sub-heading">A simple platform designed to help agents stay connected, organized, and in control of their everyday activities.</p>
+      </div>
+
+      <!-- 6 Benefit Cards (3x2 Desktop Grid) -->
+      <div class="why-choose-grid">
+        
+        <!-- CARD 01: Manage Your Network -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-wrap icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 class="why-choose-title">Manage Your Network</h3>
+          <p class="why-choose-desc">View connected agents, explore detailed profiles, and understand your referral network through the Agent Tree.</p>
+        </div>
+
+        <!-- CARD 02: Manage Your Properties -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-wrap icon-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3 class="why-choose-title">Manage Your Properties</h3>
+          <p class="why-choose-desc">Create, view, edit, and manage properties associated with your account.</p>
+        </div>
+
+        <!-- CARD 03: Stay Connected -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-wrap icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </div>
+          <h3 class="why-choose-title">Stay Connected</h3>
+          <p class="why-choose-desc">Communicate with other agents through direct messaging and group conversations.</p>
+        </div>
+
+        <!-- CARD 04: Stay Organized -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-wrap icon-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3 class="why-choose-title">Stay Organized</h3>
+          <p class="why-choose-desc">Create and manage personal notes, filter them by date, and export them when needed.</p>
+        </div>
+
+        <!-- CARD 05: Stay Informed -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-wrap icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </div>
+          <h3 class="why-choose-title">Stay Informed</h3>
+          <p class="why-choose-desc">View unread notifications, check notification counts, and mark notifications as read.</p>
+        </div>
+
+        <!-- CARD 06: Simple & Secure Access -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-wrap icon-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3 class="why-choose-title">Simple &amp; Secure Access</h3>
+          <p class="why-choose-desc">Access your account securely with registration, referral validation, login, and Email OTP password recovery.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. PLATFORM TREE SECTION (CENTRAL AGENT NETWORK HUB - 7 FEATURES)
+       ========================================================================== -->
+  <section class="what-we-provide-section" id="what-we-provide">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-center">
+        <div class="section-badge-pill">WHAT WE PROVIDE</div>
+        <h2 class="section-main-heading">Everything You Need to Manage<br><span style="color: #07194F;">Your Agent Network</span></h2>
+        <p class="section-sub-heading">Just My Team provides agents with simple tools to manage their network, properties, communication, and personal information from one platform.</p>
+      </div>
+
+      <!-- Network Hub Visual Composition -->
+      <div class="network-layout">
+        
+        <!-- Curved Connector Lines (SVG) - Rebalanced for 7 Features (4 Left, 3 Right) -->
+        <svg class="connector-layer" viewBox="0 0 1200 560" fill="none" preserveAspectRatio="none" aria-hidden="true">
+          <!-- 4 LEFT TO CENTER CONNECTIONS -->
+          <!-- 1: Agent Network (Blue #0877E8) -->
+          <circle cx="430" cy="55" r="3.5" fill="#0877E8" />
+          <path d="M 430 55 L 452 55 C 500 55, 465 201, 491 201" stroke="#0877E8" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="491" cy="201" r="5.5" fill="#0877E8" />
+
+          <!-- 2: Agent Tree (Green #18A94A) -->
+          <circle cx="430" cy="205" r="3.5" fill="#18A94A" />
+          <path d="M 430 205 L 446 205 C 462 205, 452 254, 468 254" stroke="#18A94A" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="468" cy="254" r="5.5" fill="#18A94A" />
+
+          <!-- 3: Property Management (Indigo #3B82F6) -->
+          <circle cx="430" cy="355" r="3.5" fill="#3B82F6" />
+          <path d="M 430 355 L 446 355 C 462 355, 452 306, 468 306" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="468" cy="306" r="5.5" fill="#3B82F6" />
+
+          <!-- 4: Chat & Communication (Orange #F59A00) -->
+          <circle cx="430" cy="505" r="3.5" fill="#F59A00" />
+          <path d="M 430 505 L 452 505 C 500 505, 465 359, 491 359" stroke="#F59A00" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="491" cy="359" r="5.5" fill="#F59A00" />
+
+          <!-- 3 RIGHT FROM CENTER CONNECTIONS (REBALANCED FOR 3 ITEMS) -->
+          <!-- 1: Personal Notes (Pink #F43F5E) -->
+          <circle cx="709" cy="201" r="5.5" fill="#F43F5E" />
+          <path d="M 709 201 C 735 201, 700 55, 748 55 L 770 55" stroke="#F43F5E" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="770" cy="55" r="3.5" fill="#F43F5E" />
+
+          <!-- 2: Notifications (Sky Blue #0284C7) - Rebalanced to Center Line cy=280 -->
+          <circle cx="735" cy="280" r="5.5" fill="#0284C7" />
+          <path d="M 735 280 L 770 280" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="770" cy="280" r="3.5" fill="#0284C7" />
+
+          <!-- 3: Secure Account Access (Purple #7257E8) -->
+          <circle cx="709" cy="359" r="5.5" fill="#7257E8" />
+          <path d="M 709 359 C 735 359, 700 505, 748 505 L 770 505" stroke="#7257E8" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="770" cy="505" r="3.5" fill="#7257E8" />
+        </svg>
+
+        <!-- 3-Column Layout: Left (4 Features + (→)), Center (Hub), Right ((â†) + 3 Features) -->
+        <div class="network-columns-wrap">
+          
+          <!-- LEFT COLUMN: 4 Features with right-pointing arrow buttons -->
+          <div class="network-column network-left">
+            
+            <!-- 1. Agent Network -->
+            <div class="network-feature-item">
+              <div class="feature-icon-circle icon-blue">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="feature-text-block">
+                <h3 class="feature-item-title">Agent Network</h3>
+                <p class="feature-item-desc">View your connected agents, explore their profiles, and manage your professional network from one place.</p>
+              </div>
+              <a href="#grow-your-team" class="feature-arrow-btn arrow-blue" aria-label="View Agent Network">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 2. Agent Tree -->
+            <div class="network-feature-item">
+              <div class="feature-icon-circle icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="5" r="3.2" fill="currentColor"></circle>
+                  <circle cx="6" cy="19" r="3.2" fill="currentColor"></circle>
+                  <circle cx="18" cy="19" r="3.2" fill="currentColor"></circle>
+                  <path d="M12 8.2v4.8M6 15.8v-2a1.8 1.8 0 0 1 1.8-1.8h8.4a1.8 1.8 0 0 1 1.8 1.8v2" stroke-width="2.2"></path>
+                </svg>
+              </div>
+              <div class="feature-text-block">
+                <h3 class="feature-item-title">Agent Tree</h3>
+                <p class="feature-item-desc">Visualize your referral network through a clear hierarchical agent tree.</p>
+              </div>
+              <a href="login.html" class="feature-arrow-btn arrow-green" aria-label="View Agent Tree">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 3. Property Management -->
+            <div class="network-feature-item">
+              <div class="feature-icon-circle icon-indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9.5l9-7 9 7v10.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <div class="feature-text-block">
+                <h3 class="feature-item-title">Property Management</h3>
+                <p class="feature-item-desc">Create, view, edit, and manage properties associated with your account.</p>
+              </div>
+              <a href="properties.html" class="feature-arrow-btn arrow-indigo" aria-label="View Property Management">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 4. Chat & Communication -->
+            <div class="network-feature-item">
+              <div class="feature-icon-circle icon-orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <div class="feature-text-block">
+                <h3 class="feature-item-title">Chat &amp; Communication</h3>
+                <p class="feature-item-desc">Communicate through secure one-to-one messages and group conversations with other agents.</p>
+              </div>
+              <a href="login.html" class="feature-arrow-btn arrow-orange" aria-label="View Chat & Communication">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- CENTER: Circular Agent Network Hub -->
+          <div class="network-center">
+            <div class="central-agent-hub">
+              <div class="hub-outer-dotted" aria-hidden="true"></div>
+              <div class="hub-middle-glow" aria-hidden="true"></div>
+              <div class="hub-inner-core">
+                <svg viewBox="0 0 64 64" fill="none" class="hub-core-team-icon" aria-label="Agent Network">
+                  <!-- Main center user -->
+                  <circle cx="32" cy="20" r="7.5" fill="#0877E8"/>
+                  <path d="M19 46C19 38.82 24.82 33 32 33C39.18 33 45 38.82 45 46V48H19V46Z" fill="#0877E8"/>
+                  <!-- Left user -->
+                  <circle cx="17" cy="24" r="5.5" fill="#0877E8"/>
+                  <path d="M7 46C7 40.7 11.1 36.4 16.3 36.4C18.4 36.4 20.3 37.1 21.8 38.2C19.8 40.3 18.5 43.1 18.5 46.2V48H7V46Z" fill="#0877E8"/>
+                  <!-- Right user -->
+                  <circle cx="47" cy="24" r="5.5" fill="#0877E8"/>
+                  <path d="M57 46C57 40.7 52.9 36.4 47.7 36.4C45.6 36.4 43.7 37.1 42.2 38.2C44.2 40.3 45.5 43.1 45.5 46.2V48H57V46Z" fill="#0877E8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: 3 Rebalanced Features with left-pointing arrow buttons -->
+          <div class="network-column network-right">
+            
+            <!-- 1. Personal Notes -->
+            <div class="network-feature-item">
+              <a href="login.html" class="feature-arrow-btn arrow-rose" aria-label="View Personal Notes">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </a>
+              <div class="feature-icon-circle icon-rose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div class="feature-text-block">
+                <h3 class="feature-item-title">Personal Notes</h3>
+                <p class="feature-item-desc">Create, edit, organize, filter, and export your personal notes whenever you need them.</p>
+              </div>
+            </div>
+
+            <!-- 2. Notifications -->
+            <div class="network-feature-item">
+              <a href="login.html" class="feature-arrow-btn arrow-sky" aria-label="View Notifications">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </a>
+              <div class="feature-icon-circle icon-sky">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="currentColor" stroke-width="2.2"></path>
+                </svg>
+              </div>
+              <div class="feature-text-block">
+                <h3 class="feature-item-title">Notifications</h3>
+                <p class="feature-item-desc">Stay informed with unread notifications, notification counts, and updates from your network.</p>
+              </div>
+            </div>
+
+            <!-- 3. Secure Account Access -->
+            <div class="network-feature-item">
+              <a href="login.html" class="feature-arrow-btn arrow-purple" aria-label="View Secure Account Access">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </a>
+              <div class="feature-icon-circle icon-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="3" ry="3" fill="currentColor"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2.2"></path>
+                  <circle cx="12" cy="16.5" r="1.5" fill="#FFFFFF"></circle>
+                </svg>
+              </div>
+              <div class="feature-text-block">
+                <h3 class="feature-item-title">Secure Account Access</h3>
+                <p class="feature-item-desc">Register securely, validate referral information, sign in, and recover your account using Email OTP verification.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       4. GROW YOUR TEAM SECTION (VERTICAL JOURNEY & EXPANDING NETWORK VISUAL)
+       ========================================================================== -->
+  <section class="grow-team-section" id="grow-your-team">
+    <!-- Subtle Background Atmosphere & Decorations -->
+    <div class="grow-bg-arc" aria-hidden="true"></div>
+    <div class="grow-bg-dots-left" aria-hidden="true">
+      <svg width="68" height="68" viewBox="0 0 68 68" fill="none">
+        <circle cx="8" cy="8" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="28" cy="8" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="48" cy="8" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="8" cy="28" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="28" cy="28" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="48" cy="28" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="8" cy="48" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="28" cy="48" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="48" cy="48" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+      </svg>
+    </div>
+    <div class="grow-bg-dots-right" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+        <circle cx="10" cy="10" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="30" cy="10" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="50" cy="10" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="70" cy="10" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="10" cy="30" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="30" cy="30" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="50" cy="30" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="70" cy="30" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="10" cy="50" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="30" cy="50" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="50" cy="50" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+        <circle cx="70" cy="50" r="2.5" fill="#0877E8" fill-opacity="0.18"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="grow-team-layout">
+        
+        <!-- LEFT SIDE: Header & Vertical Journey Timeline -->
+        <div class="grow-team-left">
+          
+          <div class="grow-team-badge">GROW YOUR TEAM</div>
+          
+          <h2 class="grow-team-heading">
+            Expand Your Network,<br>
+            Build <span class="highlight-blue">More Opportunities</span>
+          </h2>
+          
+          <p class="grow-team-subtitle">
+            Invite new agents, connect with your network, and build a stronger referral system &mdash; all in one place.
+          </p>
+
+          <!-- Clean Vertical Timeline (No rectangular cards) -->
+          <div class="grow-timeline">
+            
+            <!-- Step 01 -->
+            <div class="timeline-step-item">
+              <div class="timeline-step-indicator">
+                <div class="step-number timeline-step-num">01</div>
+                <div class="timeline-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="step-icon timeline-step-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0877E8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+              </div>
+              <div class="timeline-step-content">
+                <h3 class="timeline-step-title">Create Your Account</h3>
+                <p class="timeline-step-desc">Register with referral validation and complete your profile to get started.</p>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="timeline-step-item">
+              <div class="timeline-step-indicator">
+                <div class="step-number timeline-step-num">02</div>
+                <div class="timeline-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="step-icon timeline-step-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0877E8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <div class="timeline-step-content">
+                <h3 class="timeline-step-title">Invite New Agents</h3>
+                <p class="timeline-step-desc">Bring new agents to the platform through email validation.</p>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="timeline-step-item">
+              <div class="timeline-step-indicator">
+                <div class="step-number timeline-step-num">03</div>
+                <div class="timeline-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="step-icon timeline-step-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0877E8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="timeline-step-content">
+                <h3 class="timeline-step-title">Build Your Network</h3>
+                <p class="timeline-step-desc">Connect with agents, view their profiles, and grow your professional network.</p>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="timeline-step-item">
+              <div class="timeline-step-indicator">
+                <div class="step-number timeline-step-num">04</div>
+              </div>
+              <div class="step-icon timeline-step-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0877E8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                  <polyline points="4 8 10 3 14 6 20 2"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-step-content">
+                <h3 class="timeline-step-title">Grow Together</h3>
+                <p class="timeline-step-desc">Build a stronger referral network and unlock more opportunities with your team.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE: Network Illustration & Expanding Referral Ecosystem -->
+        <div class="grow-team-right">
+          <div class="grow-visual-wrapper">
+            
+            <!-- Soft Blue Circular Glow & Outer Atmosphere -->
+            <div class="network-central-glow" aria-hidden="true"></div>
+            
+            <!-- Upward Momentum Arrow Graphic (SaaS Growth) -->
+            <svg class="network-momentum-arrow" viewBox="0 0 540 480" fill="none" aria-hidden="true">
+              <path d="M 370 360 C 440 310, 490 210, 510 135" stroke="#CCE4FC" stroke-width="20" stroke-linecap="round" stroke-opacity="0.5" />
+              <polygon points="505,115 530,140 490,150" fill="#CCE4FC" fill-opacity="0.65" />
+            </svg>
+
+            <!-- Curved Dashed Connection Lines between Central Agent and Nodes -->
+            <svg class="network-connection-svg" viewBox="0 0 540 480" fill="none" aria-hidden="true">
+              <!-- Top Node Connection -->
+              <path d="M 270 135 L 270 64" stroke="#0877E8" stroke-width="1.8" stroke-dasharray="5 5" stroke-opacity="0.6" />
+              <circle cx="270" cy="64" r="3" fill="#0877E8" />
+              <!-- Top-Left Node Connection -->
+              <path d="M 196 166 C 150 135, 115 110, 100 100" stroke="#0877E8" stroke-width="1.8" stroke-dasharray="5 5" stroke-opacity="0.6" />
+              <circle cx="100" cy="100" r="3" fill="#0877E8" />
+              <!-- Mid-Left Node Connection -->
+              <path d="M 165 240 L 70 240" stroke="#0877E8" stroke-width="1.8" stroke-dasharray="5 5" stroke-opacity="0.6" />
+              <circle cx="70" cy="240" r="3" fill="#0877E8" />
+              <!-- Bottom-Left Node Connection -->
+              <path d="M 196 314 C 150 345, 115 370, 104 380" stroke="#0877E8" stroke-width="1.8" stroke-dasharray="5 5" stroke-opacity="0.6" />
+              <circle cx="104" cy="380" r="3" fill="#0877E8" />
+              <!-- Mid-Right Node Connection -->
+              <path d="M 375 240 C 415 230, 445 220, 454 216" stroke="#0877E8" stroke-width="1.8" stroke-dasharray="5 5" stroke-opacity="0.6" />
+              <circle cx="454" cy="216" r="3" fill="#0877E8" />
+              <!-- Bottom-Right Node Connection -->
+              <path d="M 344 314 C 380 340, 415 365, 429 373" stroke="#0877E8" stroke-width="1.8" stroke-dasharray="5 5" stroke-opacity="0.6" />
+              <circle cx="429" cy="373" r="3" fill="#0877E8" />
+            </svg>
+
+            <!-- Central Agent Profile Using Laptop -->
+            <div class="network-central-wrap">
+              <img class="network-central-img" 
+                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80" 
+                   alt="Agent growing their referral network on laptop" 
+                   loading="lazy">
+            </div>
+
+            <!-- Surrounding Agent Profile Circles (Diverse Professional Agents) -->
+            <!-- 1. Top Agent (Male professional) -->
+            <div class="network-node node-top" title="Connected Agent">
+              <img class="network-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Agent" loading="lazy">
+            </div>
+
+            <!-- 2. Top-Left Agent (Female professional) -->
+            <div class="network-node node-top-left" title="Connected Agent">
+              <img class="network-avatar" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80" alt="Agent" loading="lazy">
+            </div>
+
+            <!-- 3. Mid-Left Agent (Male professional) -->
+            <div class="network-node node-mid-left" title="Connected Agent">
+              <img class="network-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Agent" loading="lazy">
+            </div>
+
+            <!-- 4. Bottom-Left Agent (Female professional) -->
+            <div class="network-node node-bottom-left" title="Connected Agent">
+              <img class="network-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Agent" loading="lazy">
+            </div>
+
+            <!-- 5. Mid-Right Agent (Female professional) -->
+            <div class="network-node node-mid-right" title="Connected Agent">
+              <img class="network-avatar" src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80" alt="Agent" loading="lazy">
+            </div>
+
+            <!-- 6. Bottom-Right Agent (Male professional) -->
+            <div class="network-node node-bottom-right" title="Connected Agent">
+              <img class="network-avatar" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80" alt="Agent" loading="lazy">
+            </div>
+
+            <!-- Small Floating Visual Callouts / Badges (NOT large text cards) -->
+            <!-- 1. "Stronger Network" (Top Right) -->
+            <div class="floating-network-badge badge-top-right">
+              <div class="floating-badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="floating-badge-text">
+                <strong>Stronger Network</strong>
+              </div>
+            </div>
+
+            <!-- 2. "More Opportunities" (Mid Left) -->
+            <div class="floating-network-badge badge-mid-left">
+              <div class="floating-badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div class="floating-badge-text">
+                <strong>More Opportunities</strong>
+              </div>
+            </div>
+
+            <!-- 3. "Grow Together" (Bottom Right) -->
+            <div class="floating-network-badge badge-bottom-right">
+              <div class="floating-badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 17l-5-5a2.828 2.828 0 1 1 4-4l1 1 1-1a2.828 2.828 0 1 1 4 4l-5 5z"></path>
+                  <path d="M14 14l3.5 3.5a2.121 2.121 0 0 1-3 3L11 17"></path>
+                </svg>
+              </div>
+              <div class="floating-badge-text">
+                <strong>Grow Together</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. HOW IT WORKS SECTION
+       ========================================================================== -->
+  <section class="how-it-works-section" id="how-it-works">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-center">
+        <div class="section-badge-pill">HOW IT WORKS</div>
+        <h2 class="section-main-heading">How Just My Team Works</h2>
+        <p class="section-sub-heading">A simple platform to manage your agent network, properties, communication, and daily activities.</p>
+      </div>
+
+      <!-- 4 Steps Horizontal Timeline Layout -->
+      <div class="steps-timeline-wrap">
+        <div class="steps-connecting-line" aria-hidden="true"></div>
+
+        <div class="steps-grid">
+          
+          <!-- STEP 01 -->
+          <div class="step-card">
+            <div class="step-card-header">
+              <div class="step-badge-number step-badge-blue">01</div>
+              <div class="step-icon-bubble icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">Register &amp; Join</h3>
+            <p class="step-desc">Create your account and complete referral validation during registration.</p>
+          </div>
+
+          <!-- STEP 02 -->
+          <div class="step-card">
+            <div class="step-card-header">
+              <div class="step-badge-number step-badge-green">02</div>
+              <div class="step-icon-bubble icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <circle cx="6" cy="19" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <path d="M12 8v4M6 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">Manage Your Network</h3>
+            <p class="step-desc">Connect with agents, view your network, and explore your Agent Tree.</p>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="step-card">
+            <div class="step-card-header">
+              <div class="step-badge-number step-badge-blue">03</div>
+              <div class="step-icon-bubble icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">Manage &amp; Communicate</h3>
+            <p class="step-desc">Manage your properties, send messages, join group chats, and create personal notes.</p>
+          </div>
+
+          <!-- STEP 04 -->
+          <div class="step-card">
+            <div class="step-card-header">
+              <div class="step-badge-number step-badge-green">04</div>
+              <div class="step-icon-bubble icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">Stay Updated</h3>
+            <p class="step-desc">Check your dashboard and receive notifications about your account activity.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. PROPERTIES PREVIEW SECTION
+       ========================================================================== -->
+  <section class="home-properties-section" id="properties">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-center">
+        <div class="section-badge-pill">PROPERTIES</div>
+        <h2 class="section-main-heading">Explore Properties</h2>
+        <p class="section-sub-heading">Discover properties available through the Just My Team platform.</p>
+      </div>
+
+      <!-- Properties Grid -->
+      <div class="properties-grid home-properties-grid" id="home-properties-grid">
+        
+        <!-- Property Card 101 -->
+        <div class="property-card" data-id="prop-101" id="home-prop-101">
+          <a href="property-detail.html" class="property-img-wrap" aria-label="Inspect Rolling Hills Property">
+            <img class="property-img" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Rolling Hills Property" loading="lazy" />
+            <span class="property-type-tag">Land</span>
+            <span class="property-status-tag">Active</span>
+          </a>
+          <div class="property-content">
+            <div class="property-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Austin, Texas
+            </div>
+            <h3 class="property-card-title">
+              <a href="property-detail.html">Rolling Hills Property</a>
+            </h3>
+            <div class="property-specs">
+              <div class="spec-item"><div class="spec-val">140 AC</div><div class="spec-lbl">Size</div></div>
+              <div class="spec-item"><div class="spec-val">$4,250</div><div class="spec-lbl">Price/Acre</div></div>
+              <div class="spec-item"><div class="spec-val">TX-990...</div><div class="spec-lbl">APN Code</div></div>
+            </div>
+            <div class="property-footer">
+              <div class="property-price-wrap">
+                <div class="price-main">$595,000</div>
+                <div class="price-unit">Total Asking Price</div>
+              </div>
+              <a href="property-detail.html" class="property-view-link">
+                View Property <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Card 102 -->
+        <div class="property-card" data-id="prop-102" id="home-prop-102">
+          <a href="property-detail-102.html" class="property-img-wrap" aria-label="Inspect Mountain View Tract">
+            <img class="property-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Mountain View Tract" loading="lazy" />
+            <span class="property-type-tag">Residential</span>
+            <span class="property-status-tag">Active</span>
+          </a>
+          <div class="property-content">
+            <div class="property-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Ashe, North Carolina
+            </div>
+            <h3 class="property-card-title">
+              <a href="property-detail-102.html">Mountain View Tract</a>
+            </h3>
+            <div class="property-specs">
+              <div class="spec-item"><div class="spec-val">48 AC</div><div class="spec-lbl">Size</div></div>
+              <div class="spec-item"><div class="spec-val">$6,791</div><div class="spec-lbl">Price/Acre</div></div>
+              <div class="spec-item"><div class="spec-val">NC-102...</div><div class="spec-lbl">APN Code</div></div>
+            </div>
+            <div class="property-footer">
+              <div class="property-price-wrap">
+                <div class="price-main">$326,000</div>
+                <div class="price-unit">Total Asking Price</div>
+              </div>
+              <a href="property-detail-102.html" class="property-view-link">
+                View Property <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Card 103 -->
+        <div class="property-card" data-id="prop-103" id="home-prop-103">
+          <a href="property-detail-103.html" class="property-img-wrap" aria-label="Inspect Commercial Development Tract">
+            <img class="property-img" src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Commercial Development Tract" loading="lazy" />
+            <span class="property-type-tag">Commercial</span>
+            <span class="property-status-tag">Active</span>
+          </a>
+          <div class="property-content">
+            <div class="property-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Pinal, Arizona
+            </div>
+            <h3 class="property-card-title">
+              <a href="property-detail-103.html">Commercial Development Tract</a>
+            </h3>
+            <div class="property-specs">
+              <div class="spec-item"><div class="spec-val">18.5 AC</div><div class="spec-lbl">Size</div></div>
+              <div class="spec-item"><div class="spec-val">$48,000</div><div class="spec-lbl">Price/Acre</div></div>
+              <div class="spec-item"><div class="spec-val">AZ-441...</div><div class="spec-lbl">APN Code</div></div>
+            </div>
+            <div class="property-footer">
+              <div class="property-price-wrap">
+                <div class="price-main">$888,000</div>
+                <div class="price-unit">Total Asking Price</div>
+              </div>
+              <a href="property-detail-103.html" class="property-view-link">
+                View Property <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- View All Properties Button -->
+      <div class="home-properties-cta">
+        <a href="properties.html" class="btn btn-primary btn-lg view-all-properties" id="btn-view-all-properties">
+          View All Properties <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <!-- ==================================================
+       HOME PAGE BLOG SECTION
+       ================================================== -->
+  <section class="home-blog-section" id="blog">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-center">
+        <div class="section-badge-pill">BLOG</div>
+        <h2 class="section-main-heading">Latest from Our Blog</h2>
+        <p class="section-sub-heading">Explore insights, ideas, and useful information from the Just My Team platform.</p>
+      </div>
+
+      <!-- Blog Grid (3 Columns) -->
+      <div class="home-blog-grid" id="home-blog-grid">
+        
+        <!-- Blog Card 1: Platform Overview -->
+        <a href="blog-detail.html" class="blog-guide-card" aria-label="Read Guide: Getting Started with the Agent Dashboard & Network">
+          <div class="blog-guide-media">
+            <img 
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" 
+              alt="Golden sunrise landscape representing Agent Dashboard and Network" 
+              class="blog-guide-img"
+              loading="lazy"
+            />
+            <div class="blog-guide-badge cat-property">
+              <svg class="guide-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+              <span>Platform Overview</span>
+            </div>
+          </div>
+          <div class="blog-guide-content">
+            <h3 class="blog-guide-title">Getting Started with the Agent Dashboard &amp; Network</h3>
+            <p class="blog-guide-desc">
+              Learn how to navigate your agent dashboard, view network activity, manage your profile, and access properties and chat from one central location.
+            </p>
+            <div class="blog-guide-footer">
+              <div class="blog-guide-meta">
+                <svg class="meta-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Platform Guide <span class="meta-separator">•</span> 3 min read</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 2: Property Guide -->
+        <a href="blog-detail-2.html" class="blog-guide-card" aria-label="Read Guide: How to Create, View and Edit Properties">
+          <div class="blog-guide-media">
+            <img 
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" 
+              alt="Majestic mountains and pines representing Property Guide" 
+              class="blog-guide-img"
+              loading="lazy"
+            />
+            <div class="blog-guide-badge cat-property">
+              <svg class="guide-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              <span>Property Guide</span>
+            </div>
+          </div>
+          <div class="blog-guide-content">
+            <h3 class="blog-guide-title">How to Create, View and Edit Properties</h3>
+            <p class="blog-guide-desc">
+              Step-by-step guide on creating, editing, and managing properties, including filtering by state and city, and using location mapping.
+            </p>
+            <div class="blog-guide-footer">
+              <div class="blog-guide-meta">
+                <svg class="meta-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Property Guide <span class="meta-separator">•</span> 5 min read</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 3: Agent Tree Guide -->
+        <a href="blog-detail-3.html" class="blog-guide-card" aria-label="Read Guide: Navigating the Agent Tree & Sending Invitations">
+          <div class="blog-guide-media">
+            <img 
+              src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=900&q=80" 
+              alt="Workspace with invitation envelope badge for Agent Tree Guide" 
+              class="blog-guide-img"
+              loading="lazy"
+            />
+            <div class="blog-guide-media-graphic agent-tree-graphic" aria-hidden="true">
+              <div class="graphic-envelope">
+                <svg viewBox="0 0 64 48" fill="none" class="envelope-svg">
+                  <rect x="2" y="2" width="60" height="44" rx="6" fill="#FFFFFF" stroke="#0877E8" stroke-width="3"/>
+                  <path d="M4 6L32 28L60 6" stroke="#0877E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="envelope-counter">1</span>
+              </div>
+            </div>
+            <div class="blog-guide-badge cat-agent-tree">
+              <svg class="guide-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Agent Tree Guide</span>
+            </div>
+          </div>
+          <div class="blog-guide-content">
+            <h3 class="blog-guide-title">Navigating the Agent Tree &amp; Sending Invitations</h3>
+            <p class="blog-guide-desc">
+              Understand how the hierarchical Agent Tree displays your network and how to send email invitations to new agents.
+            </p>
+            <div class="blog-guide-footer">
+              <div class="blog-guide-meta">
+                <svg class="meta-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Agent Tree Guide <span class="meta-separator">•</span> 4 min read</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- View All Blogs Button -->
+      <div class="home-blog-cta">
+        <a href="blog.html" class="btn btn-primary btn-lg view-all-blogs" id="btn-view-all-blogs">
+          View All Blogs <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+<!-- ==================================================
+       HOME PAGE FAQ SECTION
+       ================================================== -->
+  <section class="home-faq-section" id="faq">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-center">
+        <div class="section-badge-pill">FAQ</div>
+        <h2 class="section-main-heading">Frequently Asked Questions</h2>
+        <p class="section-sub-heading">Find quick and clear answers about platform features, user roles, authentication, and communication.</p>
+      </div>
+
+      <!-- FAQ 2-Column Accordion Grid -->
+      <div class="home-faq-grid" id="home-faq-grid">
+        <div class="home-faq-col">
+          <div class="faq-item" id="faq-item-1">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-1" aria-controls="faq-a-1">
+              <span>How do I register?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+              To register, visit the Register page, enter your referral code, fill in your personal details including state and city, and create a password.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-2">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-2" aria-controls="faq-a-2">
+              <span>What is referral validation?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+              Referral validation verifies the referral information provided during registration before an agent can complete the account creation process.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-3">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-3" aria-controls="faq-a-3">
+              <span>How can I reset my password?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+              Use the Forgot Password option and complete the Email OTP verification process to recover access to your account.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-4">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-4" aria-controls="faq-a-4">
+              <span>How does the Agent Network work?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+              The Agent Network allows agents to view their connected agents and access their detailed profiles.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-5">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-5" aria-controls="faq-a-5">
+              <span>What is the Agent Tree?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
+              The Agent Tree provides a hierarchical visualization of an agent's referral network.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-6">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-6" aria-controls="faq-a-6">
+              <span>How do I invite another agent?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-6" role="region" aria-labelledby="faq-q-6">
+              Agents can invite new agents to join their network through email validation.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-7">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-7" aria-controls="faq-a-7">
+              <span>What can I do with properties?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-7" role="region" aria-labelledby="faq-q-7">
+              Agents can create, view, edit, and manage properties associated with their account.
+            </div>
+          </div>
+        </div>
+        <div class="home-faq-col">
+          <div class="faq-item" id="faq-item-8">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-8" aria-controls="faq-a-8">
+              <span>How does direct messaging work?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-8" role="region" aria-labelledby="faq-q-8">
+              Agents can communicate one-to-one with other agents through direct messaging.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-9">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-9" aria-controls="faq-a-9">
+              <span>How does group chat work?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-9" role="region" aria-labelledby="faq-q-9">
+              Agents can create and manage group conversations, including the option to enable owner-only messaging.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-10">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-10" aria-controls="faq-a-10">
+              <span>How do Personal Notes work?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-10" role="region" aria-labelledby="faq-q-10">
+              Agents can create, read, update, and delete personal notes. Notes can also be filtered by date and exported.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-11">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-11" aria-controls="faq-a-11">
+              <span>Who can manage membership plans?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-11" role="region" aria-labelledby="faq-q-11">
+              Both Agents and Admins can view available membership plans, while only Admins can create, edit, and delete membership plans.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-12">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-12" aria-controls="faq-a-12">
+              <span>How do notifications work?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-12" role="region" aria-labelledby="faq-q-12">
+              Users can view unread notifications, check unread counts, and mark notifications as read.
+            </div>
+          </div>
+          <div class="faq-item" id="faq-item-13">
+            <button class="faq-question" type="button" aria-expanded="false" id="faq-q-13" aria-controls="faq-a-13">
+              <span>How does location data work?</span>
+              <span class="faq-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-a-13" role="region" aria-labelledby="faq-q-13">
+              The platform uses dynamic state and city data for properties, profiles, and registration.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Just My Team Home">
+            <img src="assets/front/brand-logo.png" alt="Just My Team" class="brand-logo-img">
+          </a>
+          <p>Just My Team is a platform for agents to manage their network, properties, communication, and personal notes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="properties.html" class="footer-link">Properties</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html" class="footer-link">Profile</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Register</a></li>
+            <li><a href="forgot-password.html" class="footer-link">Forgot Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Just My Team. All rights reserved.
+        </div>
+        <div>
+          Developed by: <span class="baadam-credit">Baadam Info And Trade Link Services Pvt. Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=7"></script>
+  <script src="js/ai-assistant.js?v=7"></script>
+</body>
+</html>
